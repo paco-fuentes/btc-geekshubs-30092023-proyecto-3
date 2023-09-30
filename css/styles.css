@@ -21,6 +21,12 @@ body {
     font-family: inconsolata;
 }
 
+.cursor-pointer {
+    cursor:grab;
+  }
+
+/* index page */
+
 .relativeContainer {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -89,4 +95,91 @@ body {
     background-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
+}
+
+/* color picker page */
+.colPickerContainer{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 40rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.paletteContainer {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 40rem;
+    height: 20rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.pickerPalette{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 6rem;
+    height: 12rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.palette {
+    font-weight: 200;
+    position: relative;
+    font-size: small;
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem;
+    border-style:dotted;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.colorSelectStyle{
+    /* border: unset; */
+    background-color: unset;
+    width: 2rem;
+    height: 2rem;
+    /* border-style:unset; */
+    border-style:dotted;
+    border-color: white;
+}
+
+
+
+
+#resetButton{
+
+}
+
+#playButton{
+
 }
