@@ -7,7 +7,8 @@ const colorSelect3 = document.getElementById('colorSelect3')
 const palette3 = document.getElementById('palette3')
 const colorSelect4 = document.getElementById('colorSelect4')
 const palette4 = document.getElementById('palette4')
-const resetButton = document.getElementById('resetButton')
+const reset = document.getElementById('reset')
+const play = document.getElementById('play')
 let selectedPalette = [];
 colorSelect1.addEventListener('input', () => {
     palette1.style.backgroundColor = colorSelect1.value;
@@ -41,7 +42,7 @@ colorSelect4.addEventListener('input', () => {
         selectedPalette.splice(3, 1, colorSelect4.value);
     }
 })
-resetButton.addEventListener('click', () => {
+reset.addEventListener('click', () => {
     selectedPalette = [];
     palette1.style.backgroundColor = "#000000";
     palette2.style.backgroundColor = "#000000";
@@ -53,10 +54,10 @@ resetButton.addEventListener('click', () => {
     colorSelect4.value = "#000000";
     console.log(selectedPalette);
 })
-// playButton.addEventListener('click', () => {
-//     localStorage.setItem('selectedPalette', selectedPalette.value);
-//     console.log(localStorage.getItem("selectedPalette", selectedPalette.value));
-// })
+play.addEventListener('click', () => {
+    localStorage.setItem('selectedPalette', selectedPalette);
+    // console.log(localStorage.setItem('selectedPalette', selectedPalette.value));
+})
 const currentUser = localStorage.getItem("user");
 console.log(currentUser );
 const userDisplay = document.getElementById("userDisplay");
