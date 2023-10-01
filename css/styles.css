@@ -96,7 +96,7 @@ a {
     background-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /* help */
@@ -116,7 +116,7 @@ a {
     transform: translate(0, 0rem);
 }
 
-.button-container-help{
+.button-container-help {
     position: relative;
     /* background-color: rgb(0, 255, 0); */
     display: flex;
@@ -128,13 +128,13 @@ a {
     transform: translate(0, 2rem);
 }
 
-.text-help{
+.text-help {
     text-align: left;
     padding: 2rem;
 }
 
 /* user */
-.relative-container-id{
+.relative-container-id {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -150,14 +150,14 @@ a {
     transform: translate(0, 0rem);
 }
 
-.text-input{
-    all:unset;
+.text-input {
+    all: unset;
     border-style: dashed;
     border-color: white;
     border-width: 0.05rem;
-    color:white;
+    color: white;
     background-color: black;
-    cursor:text;
+    cursor: text;
 }
 
 /* color picker page */
