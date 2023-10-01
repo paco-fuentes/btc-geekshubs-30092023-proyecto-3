@@ -1,5 +1,5 @@
 
-# Mastermind
+# Ms. Mind
 
 ---
 
