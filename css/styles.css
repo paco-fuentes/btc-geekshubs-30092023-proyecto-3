@@ -235,3 +235,15 @@ a {
     border-style: dotted;
     border-color: white;
 }
+
+.button-color-picker-container {
+    position: relative;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    width: 14rem;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 0rem);
+}

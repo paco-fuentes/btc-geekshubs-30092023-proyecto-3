@@ -13,6 +13,7 @@
     <title>Palette</title>
 </head>
 <div class="col-picker-container">
+    <div id="userDisplay"></div>
     <div class="palette-container">
         <div class="picker-palette">
             <input type="color" class="color-select-style cursor-pointer" name="" id="colorSelect1">
@@ -31,12 +32,19 @@
             <div class="palette" id="palette4"></div>
         </div>
     </div>
-    <div class="button-container">
-        <div class="button" id="resetButton">reset</div>
-        <div class="button" id="playButton">play</div>
+    <div class="button-color-picker-container">
+        <a href="./user.html">
+            <div class="button" id="resetButton">reset</div>
+        </a>
+        <a href="./user.html">
+            <div class="button" id="return">return</div>
+        </a>
+        <!-- <a href="./user.html"> -->
+            <div class="button" id="playButton">play</div>
+        <!-- </a> -->
     </div>
 </div>
-<script src="../js/main.js"></script>
+<script src="../js/colorPicker.js"></script>
 </body>
 
 </html>
