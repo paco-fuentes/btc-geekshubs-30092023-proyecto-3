@@ -4,16 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Mind</title>
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Rules</title>
 </head>
-    
-    <script src="../js/main.js"></script>
+
+<body>
+    <div class="relative-container-help">
+        <div class="titulo">RULES</div>
+        <div class="text-help">
+            Mastermind: Basic Game Rules
+
+            Objective of the Game:
+
+            The goal of Mastermind is for the "codemaker" to select a hidden color combination, and the "codebreaker" to
+            try and guess that combination within a limited number of attempts.
+            Initial Setup:
+
+            The codemaker chooses a secret combination of colors.
+            The combination can consist of multiple different colors, and colors may be repeated.
+            Available Colors:
+
+            The colors that can be chosen for the combination are typically part of a predefined set, such as red,
+            green, blue, yellow, white, and black, among others.
+            Codebreaker's Attempts:
+
+            The codebreaker makes an initial guess at the combination.
+            The codemaker provides feedback on the guess.
+            Feedback:
+
+            Two different colored pegs are usually used to provide feedback.
+            One color indicates if a color is in the combination and in the correct position (correct placement).
+            Another color indicates if a color is in the combination but in an incorrect position (incorrect placement).
+            Iteration:
+
+            The codebreaker makes successive guesses based on the feedback received.
+            The number of attempts is often limited (e.g., 10 attempts).
+            End of the Game:
+
+            The game ends when the codebreaker correctly guesses the combination or exhausts the available attempts.
+            Scoring:
+
+            Performance is evaluated based on the number of attempts used to guess the combination.
+            Variations:
+
+            There may be variations in the rules depending on versions or preferences, such as the introduction of
+            wildcards, additional constraints, or the option to play in teams.
+            Fair Play:
+
+            It's important for both parties to play fairly and abide by the agreed-upon rules.
+        </div>
+        <div class="button-container-help">
+            <a href="../index.html">
+                <div class="button" id="return">return</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

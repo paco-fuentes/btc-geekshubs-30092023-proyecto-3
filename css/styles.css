@@ -19,9 +19,13 @@ body {
     font-family: inconsolata;
 }
 
+a {
+    all: unset;
+}
+
 .cursor-pointer {
-    cursor:grab;
-  }
+    cursor: grab;
+}
 
 /* index page */
 .relative-container {
@@ -33,7 +37,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 0.1rem;
+    border: 0.05rem;
     border-style: solid;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
@@ -68,8 +72,8 @@ body {
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    border: 0.1rem;
-    border-style:dashed;
+    border: 0.05rem;
+    border-style: dashed;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
@@ -92,10 +96,72 @@ body {
     background-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
+    cursor:pointer;
+}
+
+/* help */
+.relative-container-help {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 40rem;
+    height: 28rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.button-container-help{
+    position: relative;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    width: 40rem;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translate(0, 2rem);
+}
+
+.text-help{
+    text-align: left;
+    padding: 2rem;
+}
+
+/* user */
+.relative-container-id{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 40rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.text-input{
+    all:unset;
+    border-style: dashed;
+    border-color: white;
+    border-width: 0.05rem;
+    color:white;
+    background-color: black;
+    cursor:text;
 }
 
 /* color picker page */
-.col-picker-container{
+.col-picker-container {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -127,7 +193,7 @@ body {
     transform: translate(0, 0rem);
 }
 
-.picker-palette{
+.picker-palette {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -154,18 +220,18 @@ body {
     justify-content: center;
     align-items: center;
     border: 0.1rem;
-    border-style:dotted;
+    border-style: dotted;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
 }
 
-.color-select-style{
+.color-select-style {
     /* border: unset; */
     background-color: unset;
     width: 2rem;
     height: 2rem;
     /* border-style:unset; */
-    border-style:dotted;
+    border-style: dotted;
     border-color: white;
 }
