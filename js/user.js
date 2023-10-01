@@ -4,7 +4,6 @@ user.addEventListener('input', () => {
     console.log(user.value);
 })
 
-
 // const userSize = user.getElementById("user").maxLength;
 // console.log(userSize);
 document.getElementById("enter").disabled = true;

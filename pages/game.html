@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,35 @@
     <link rel="stylesheet" href="../css/styles.css">
     <title>Mr. Mind</title>
 </head>
+
 <body>
-    <div id="userDisplay" class="txt" >user</div>
-    <div id="paletteDisplay" class="txt" >palette</div>
-<script src="../js/game.js"></script>
+    <div class="game-data-box">
+        <div class="game-user-data">
+            <div id="userDisplay" class="txt"></div>
+            <div id="paletteDisplay" class="txt"></div>
+        </div>
+        <div class="txt">Paleta Elegida</div>
+        <div class="current-palette">
+            <div class="palette-game" id="currentPalette1"></div>
+            <div class="palette-game" id="currentPalette2"></div>
+            <div class="palette-game" id="currentPalette3"></div>
+            <div class="palette-game" id="currentPalette4"></div>
+        </div>
+        <div class="txt">Paleta Generada</div>
+        <div class="master-palette">
+            <div class="palette-game" id="masterPalette1"></div>
+            <div class="palette-game" id="masterPalette2"></div>
+            <div class="palette-game" id="masterPalette3"></div>
+            <div class="palette-game" id="masterPalette4"></div>
+        </div>
+        <div class="button-container-game">
+            <a href="./color-picker.html">
+                <div class="button" id="returnGameButton">return</div>
+        </div>
+        </a>
+    </div>
+
+    <script src="../js/game.js"></script>
 </body>
+
 </html>

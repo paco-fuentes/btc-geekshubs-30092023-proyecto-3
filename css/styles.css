@@ -1,3 +1,4 @@
+/* ajustes globales */
 html {
     -webkit-text-size-adjust: 100%;
     /* Con esta lÃ­nea se quita el boqueo de txt pequeÃ±o reajustado en ios */
@@ -23,48 +24,15 @@ a {
     all: unset;
 }
 
-.cursor-pointer {
-    cursor: grab;
-}
-
-.txt{
-    font-weight: 200;
-    font-size:small;
-}
-
-/* index page */
-.relative-container {
-    position: relative;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    width: 40rem;
-    height: 20rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 0.05rem;
-    border-style: solid;
-    border-color: white;
-    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
-    transform: translate(0, 0rem);
-}
-
 .titulo {
     /* weight --> ExtraLight = 200 */
     font-weight: 300;
     font-size: larger;
 }
 
-.button-container {
-    position: relative;
-    /* background-color: rgb(0, 255, 0); */
-    display: flex;
-    width: 14rem;
-    height: 2rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    transform: translate(0, 0rem);
+.txt {
+    font-weight: 200;
+    font-size: small;
 }
 
 .button {
@@ -104,7 +72,36 @@ a {
     cursor: pointer;
 }
 
-/* help */
+/* index page */
+.relative-container-index {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 40rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.button-container-index {
+    position: relative;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    width: 14rem;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(0, 0rem);
+}
+
+/* rules page */
 .relative-container-help {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -138,7 +135,7 @@ a {
     padding: 2rem;
 }
 
-/* user */
+/* user page */
 .relative-container-id {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -155,6 +152,18 @@ a {
     transform: translate(0, 0rem);
 }
 
+.button-container-user {
+    position: relative;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    width: 14rem;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(0, 0rem);
+}
+
 .text-input {
     all: unset;
     border-style: dashed;
@@ -165,23 +174,30 @@ a {
     cursor: text;
 }
 
-/* color picker page */
+/* color-picker page */
 .col-picker-container {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
     width: 40rem;
-    height: 20rem;
+    height: 30rem;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    border: 0.1rem;
+    border: 0.05rem;
     border-style: solid;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
 }
-
+#userDisplay{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height:4rem;
+}
 .palette-container {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -191,7 +207,7 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    border: 0.1rem;
+    border: 0.05rem;
     border-style: solid;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
@@ -207,7 +223,7 @@ a {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 0.1rem;
+    border: 0.05rem;
     border-style: solid;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
@@ -224,8 +240,8 @@ a {
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    border: 0.1rem;
-    border-style: dotted;
+    border: 0.05rem;
+    border-style: dashed;
     border-color: white;
     /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
     transform: translate(0, 0rem);
@@ -239,17 +255,89 @@ a {
     /* border-style:unset; */
     border-style: dotted;
     border-color: white;
+    cursor:crosshair;
 }
 
 .button-color-picker-container {
     position: relative;
     /* background-color: rgb(0, 255, 0); */
     display: flex;
-    width: 14rem;
-    height: 2rem;
+    width: 40rem;
+    height: 6rem;
     flex-direction: row;
-    padding-block: 1rem;
-    justify-content: space-around;
-    align-items: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translate(0, 0rem);
+}
+
+/* game */
+
+.game-data-box {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 18rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.game-user-data {
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 16rem;
+    height: 4rem;
+}
+
+.current-palette {
+    position: relative;
+    display: flex;
+    /* background-color: green; */
+    flex-direction: row;
+}
+
+.master-palette {
+    position: relative;
+    display: flex;
+    /* background-color:blue; */
+    flex-direction: row;
+}
+
+.palette-game {
+    position: relative;
+    font-weight: 200;
+    font-size: small;
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: dotted;
+    border-color: white;
+    /* border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; */
+    transform: translate(0, 0rem);
+}
+
+.button-container-game {
+    position: relative;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    width: 18rem;
+    height: 3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     transform: translate(0, 0rem);
 }
