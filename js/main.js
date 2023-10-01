@@ -1,5 +1,21 @@
 //user
+const user = document.getElementById('user')
+user.addEventListener('input', () => {
+    console.log(user.value);
+})
 
+
+// const userSize = user.getElementById("user").maxLength;
+// console.log(userSize);
+enter.addEventListener('click', () => {
+    localStorage.setItem('user', user.value);
+    console.log(localStorage.getItem("user", user.value));
+})
+
+// document.getElementById("enter").disabled = true;
+// var x = document.getElementById("myText").maxLength;
+
+// ----------------------------------------------------------------
 // color-picker
 const colorSelect1 = document.getElementById('colorSelect1')
 const palette1 = document.getElementById('palette1')
