@@ -57,7 +57,6 @@ a {
     display: flex;
     width: 6rem;
     height: 2rem;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     border: 0.1rem;
@@ -256,7 +255,7 @@ a {
 }
 
 /* game */
-.main-game-container{
+.main-game-container {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -334,14 +333,14 @@ a {
     transform: translate(0, 0rem);
 }
 
-.game-table{
+.game-table {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
     width: 18rem;
     height: 40rem;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     border: 0.05rem;
     border-style: solid;
@@ -350,7 +349,7 @@ a {
     padding: 2rem;
 }
 
-.row-board{
+.row-board {
     position: relative;
     display: flex;
     flex-direction: row;
