@@ -1,4 +1,3 @@
-// color-picker
 const colorSelect1 = document.getElementById('colorSelect1')
 const palette1 = document.getElementById('palette1')
 const colorSelect2 = document.getElementById('colorSelect2')
@@ -10,7 +9,7 @@ const palette4 = document.getElementById('palette4')
 const reset = document.getElementById('reset')
 const play = document.getElementById('play')
 let selectedPalette = [];
-
+// color-picker
 colorSelect1.addEventListener('input', () => {
     palette1.style.backgroundColor = colorSelect1.value;
     if (selectedPalette[0] === undefined || selectedPalette[0] === selectedPalette[0]) {
@@ -43,7 +42,6 @@ colorSelect4.addEventListener('input', () => {
         selectedPalette.splice(3, 1, colorSelect4.value);
     }
 })
-
 reset.addEventListener('click', () => {
     selectedPalette = [];
     palette1.style.backgroundColor = "#000000";
@@ -56,13 +54,11 @@ reset.addEventListener('click', () => {
     colorSelect4.value = "#000000";
     console.log(selectedPalette);
 })
-
 play.addEventListener('click', () => {
     localStorage.setItem('selectedPalette', selectedPalette);
     // console.log(localStorage.setItem('selectedPalette', selectedPalette.value));
 })
-
 const currentUser = localStorage.getItem("user");
 console.log(currentUser );
 const userDisplay = document.getElementById("userDisplay");
-userDisplay.innerHTML = `Welcome, ${currentUser}, please choose four colors from palette above...`;
+userDisplay.innerHTML = `Welcome, ${currentUser}, please choose four palette colours to play...`;
