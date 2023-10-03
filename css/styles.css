@@ -180,7 +180,7 @@ button {
     height: 28rem;
     flex-direction: column;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     border: 0.05rem;
     border-style: solid;
     border-color: white;
@@ -349,7 +349,7 @@ button {
     transform: translate(0, 0rem);
 }
 
-.game-panel{
+.game-panel {
     position: relative;
     display: flex;
     flex-direction: row;

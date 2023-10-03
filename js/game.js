@@ -7,52 +7,23 @@ const currentPalette1 = document.getElementById('currentPalette1')
 const currentPalette2 = document.getElementById('currentPalette2')
 const currentPalette3 = document.getElementById('currentPalette3')
 const currentPalette4 = document.getElementById('currentPalette4')
-const userPaletteRow1Col1 = document.getElementById('userPaletteRow1Col1')
-const userPaletteRow1Col2 = document.getElementById('userPaletteRow1Col2')
-const userPaletteRow1Col3 = document.getElementById('userPaletteRow1Col3')
-const userPaletteRow1Col4 = document.getElementById('userPaletteRow1Col4')
-const userPaletteRow2Col1 = document.getElementById('userPaletteRow2Col1')
-const userPaletteRow2Col2 = document.getElementById('userPaletteRow2Col2')
-const userPaletteRow2Col3 = document.getElementById('userPaletteRow2Col3')
-const userPaletteRow2Col4 = document.getElementById('userPaletteRow2Col4')
-const userPaletteRow3Col1 = document.getElementById('userPaletteRow3Col1')
-const userPaletteRow3Col2 = document.getElementById('userPaletteRow3Col2')
-const userPaletteRow3Col3 = document.getElementById('userPaletteRow3Col3')
-const userPaletteRow3Col4 = document.getElementById('userPaletteRow3Col4')
-const userPaletteRow4Col1 = document.getElementById('userPaletteRow4Col1')
-const userPaletteRow4Col2 = document.getElementById('userPaletteRow4Col2')
-const userPaletteRow4Col3 = document.getElementById('userPaletteRow4Col3')
-const userPaletteRow4Col4 = document.getElementById('userPaletteRow4Col4')
-const userPaletteRow5Col1 = document.getElementById('userPaletteRow5Col1')
-const userPaletteRow5Col2 = document.getElementById('userPaletteRow5Col2')
-const userPaletteRow5Col3 = document.getElementById('userPaletteRow5Col3')
-const userPaletteRow5Col4 = document.getElementById('userPaletteRow5Col4')
-const userPaletteRow6Col1 = document.getElementById('userPaletteRow6Col1')
-const userPaletteRow6Col2 = document.getElementById('userPaletteRow6Col2')
-const userPaletteRow6Col3 = document.getElementById('userPaletteRow6Col3')
-const userPaletteRow6Col4 = document.getElementById('userPaletteRow6Col4')
-const userPaletteRow7Col1 = document.getElementById('userPaletteRow7Col1')
-const userPaletteRow7Col2 = document.getElementById('userPaletteRow7Col2')
-const userPaletteRow7Col3 = document.getElementById('userPaletteRow7Col3')
-const userPaletteRow7Col4 = document.getElementById('userPaletteRow7Col4')
-const userPaletteRow8Col1 = document.getElementById('userPaletteRow8Col1')
-const userPaletteRow8Col2 = document.getElementById('userPaletteRow8Col2')
-const userPaletteRow8Col3 = document.getElementById('userPaletteRow8Col3')
-const userPaletteRow8Col4 = document.getElementById('userPaletteRow8Col4')
-const userPaletteRow9Col1 = document.getElementById('userPaletteRow9Col1')
-const userPaletteRow9Col2 = document.getElementById('userPaletteRow9Col2')
-const userPaletteRow9Col3 = document.getElementById('userPaletteRow9Col3')
-const userPaletteRow9Col4 = document.getElementById('userPaletteRow9Col4')
-const userPaletteRow10Col1 = document.getElementById('userPaletteRow10Col1')
-const userPaletteRow10Col2 = document.getElementById('userPaletteRow10Col2')
-const userPaletteRow10Col3 = document.getElementById('userPaletteRow10Col3')
-const userPaletteRow10Col4 = document.getElementById('userPaletteRow10Col4')
+const userPaletteCol1 = document.getElementById('userPaletteCol1')
+const userPaletteCol2 = document.getElementById('userPaletteCol2')
+const userPaletteCol3 = document.getElementById('userPaletteCol3')
+const userPaletteCol4 = document.getElementById('userPaletteCol4')
+let ruleta = 0;
+let current1;
+let current2;
+let current3;
+let current4;
+
+
 
 // current user
 const currentUser = localStorage.getItem("user");
 console.log(currentUser);
 const userDisplay = document.getElementById("userDisplay");
-userDisplay.innerHTML = `user ID:  ${currentUser}`;
+userDisplay.innerHTML = `user ID: ${currentUser}`;
 
 // current palette
 const currentPalette = localStorage.getItem("selectedPalette");
@@ -96,3 +67,44 @@ masterPalette1.style.backgroundColor = randomPalette[0];
 masterPalette2.style.backgroundColor = randomPalette[1];
 masterPalette3.style.backgroundColor = randomPalette[2];
 masterPalette4.style.backgroundColor = randomPalette[3];
+
+// button color roulette and current row colours order function
+userPaletteCol1.addEventListener('click', () => {
+    ruleta++;
+    if (ruleta > 3) {
+        ruleta = 0;
+    }
+    userPaletteCol1.style.backgroundColor = currentPaletteColors[ruleta];
+    current1 = currentPaletteColors[ruleta];
+    refreshCurrent();
+})
+userPaletteCol2.addEventListener('click', () => {
+    ruleta++;
+    if (ruleta > 3) {
+        ruleta = 0;
+    }
+    userPaletteCol2.style.backgroundColor = currentPaletteColors[ruleta];
+    current2 = currentPaletteColors[ruleta];
+    refreshCurrent();
+})
+userPaletteCol3.addEventListener('click', () => {
+    ruleta++;
+    if (ruleta > 3) {
+        ruleta = 0;
+    }
+    userPaletteCol3.style.backgroundColor = currentPaletteColors[ruleta];
+    current3 = currentPaletteColors[ruleta];
+    refreshCurrent();
+})
+userPaletteCol4.addEventListener('click', () => {
+    ruleta++;
+    if (ruleta > 3) {
+        ruleta = 0;
+    }
+    userPaletteCol4.style.backgroundColor = currentPaletteColors[ruleta];
+    current4 = currentPaletteColors[ruleta];
+    refreshCurrent();
+})
+function refreshCurrent() {
+    console.log(current1, current2, current3, current4);
+} 

@@ -57,6 +57,7 @@ reset.addEventListener('click', () => {
 play.addEventListener('click', () => {
     localStorage.setItem('selectedPalette', selectedPalette);
     // console.log(localStorage.setItem('selectedPalette', selectedPalette.value));
+    //if selected color no es length <=3 y no se repite color enable button
 })
 const currentUser = localStorage.getItem("user");
 console.log(currentUser );
