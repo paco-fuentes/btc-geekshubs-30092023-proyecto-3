@@ -17,8 +17,6 @@ let current2;
 let current3;
 let current4;
 
-
-
 // current user
 const currentUser = localStorage.getItem("user");
 console.log(currentUser);
@@ -106,5 +104,41 @@ userPaletteCol4.addEventListener('click', () => {
     refreshCurrent();
 })
 function refreshCurrent() {
-    console.log(current1, current2, current3, current4);
+    // console.log(current1, current2, current3, current4);
+    return currentRow = [current1, current2, current3, current4];
 } 
+
+// played rows
+const rowsPlayed = document.getElementById('rowsPlayed');
+const pushToMatrix = document.getElementById('pushToMatrix');
+
+// en new row tengo que crear 4 cols
+pushToMatrix.addEventListener('click', () => {
+    refreshCurrent();
+    const newRow = document.createElement('div');
+    newRow.classList.add('palette-game');
+    newRow.style.backgroundColor = current1;
+    console.log(current1);
+    rowsPlayed.appendChild(newRow);
+})
+
+
+// const films = document.getElementById('films')
+
+// fetch('https://ghibliapi.vercel.app/films')
+// .then(result => result.json())
+// .then(result => {
+//   result.forEach(element => {
+//     const title = document.createElement('h1')
+//     const filmImage = document.createElement('img')
+    
+//     filmImage.src = element.image
+
+//     filmImage.classList.add('image-film')
+
+//     title.innerText = element.title
+//     films.appendChild(title)
+//     films.appendChild(filmImage)
+//   });
+// })
+// .catch(error => console.log(error))
