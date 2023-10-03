@@ -116,14 +116,23 @@ const pushToMatrix = document.getElementById('pushToMatrix');
 pushToMatrix.addEventListener('click', () => {
     refreshCurrent();
     const newRow = document.createElement('div');
+    // const newCol1 = document.createElement('div');
     newRow.classList.add('palette-game');
-    newRow.style.backgroundColor = current1;
-    console.log(current1);
+    // newCol.style.backgroundColor = current1;
+    // console.log(current1);
     rowsPlayed.appendChild(newRow);
+    newRow.innerHTML = `
+    <div class="palette-game">hola</div>
+    <div class="palette-game">hola</div>
+    <div class="palette-game">hola</div>
+    <div class="palette-game">hola</div>`;
 })
 
-
+// Nota: agregar id a la clase game table para meter hay una fila con su clase y dentro el inner tex con su clase para que quede bien cuadrado
 // const films = document.getElementById('films')
+// se pueden usar las variables de interpolacion para almacenar los colores
+// contador para los intentos
+
 
 // fetch('https://ghibliapi.vercel.app/films')
 // .then(result => result.json())
