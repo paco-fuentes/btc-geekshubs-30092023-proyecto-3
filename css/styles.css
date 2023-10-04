@@ -271,12 +271,139 @@ button {
 }
 
 /* game */
+.main-game-header{
+    position: relative;
+    background-color: crimson;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
 .main-game-container {
     position: relative;
     background-color: crimson;
     display: flex;
-    width: 50rem;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* left container */
+.hud-container{
+    position: relative;
+    background-color: rgb(84, 255, 49);
+    display: flex;
+    width: 20rem;
     height: 50rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* left container --- 1 */
+.ms-mind-container{
+    position: relative;
+    background-color: rgb(255, 49, 241);
+    display: flex;
+    width: 18rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* left container --- 2 */
+.game-data-box{
+    position: relative;
+    background-color: rgb(255, 49, 241);
+    display: flex;
+    width: 18rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* left container --- 3 */
+.button-container-game{
+    position: relative;
+    background-color: rgb(255, 49, 241);
+    display: flex;
+    width: 18rem;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* center container - main*/
+.main-board-container{
+    position: relative;
+    background-color: rgb(49, 166, 255);
+    display: flex;
+    width: 30rem;
+    height: 50rem;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* center container --- 1 */
+.game-table{
+    position: relative;
+    background-color: rgb(9, 48, 77);
+    display: flex;
+    width: 28rem;
+    height: 42rem;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+/* center container --- 2 */
+.game-panel-color-selector{
+    position: relative;
+    background-color: rgb(9, 48, 77);
+    display: flex;
+    width: 28rem;
+    height: 5rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -286,172 +413,75 @@ button {
     transform: translate(0, 0rem);
 }
 
-.ms-mind-container {
-    background-color: rgb(0, 0, 0);
+/* center container --- 2 ---- color-board*/
+.color-board{
     position: relative;
+    background-color: rgb(83, 172, 240);
     display: flex;
-    width: 18rem;
-    height: 20rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     border: 0.05rem;
     border-style: solid;
     border-color: white;
-    transform: translate(0, 0rem);
 }
-
-/* tablero de datos */
-.game-data-box {
-    background-color: rgb(0, 0, 0);
+/* center container --- 2 ---- color cell*/
+.color-cell{
     position: relative;
+    background-color: rgb(9, 48, 77);
     display: flex;
-    width: 18rem;
-    height: 20rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 0.05rem;
-    border-style: solid;
-    border-color: white;
-    transform: translate(0, 0rem);
-}
-
-.game-user-data {
-    background-color: aquamarine;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 16rem;
+    width: 4rem;
     height: 4rem;
-}
-
-.current-palette {
-    background-color: blueviolet;
-    position: relative;
-    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
 }
 
-.master-palette {
-    background-color: beige;
+/* center container --- 3 */
+.game-panel-button{
     position: relative;
+    background-color: rgb(9, 48, 77);
     display: flex;
+    width: 28rem;
+    height: 3rem;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
 }
 
-.button-container-game {
-    background-color: aqua;
+/* right container */
+.checks-container-main{
     position: relative;
+    background-color: rgb(253, 255, 186);
+    display: flex;
+    width: 20rem;
+    height: 50rem;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+.checks-board{
+    position: relative;
+    background-color: rgb(236, 163, 74);
     display: flex;
     width: 18rem;
-    height: 3rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transform: translate(0, 0rem);
-}
-
-/* tablero de juego */
-.main-board-container {
-    background-color: rgb(246, 255, 0);
-    position: relative;
-    display: flex;
-    width: 30rem;
-    height: 50rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translate(0, 0rem);
-}
-
-.game-table {
-    position: relative;
-    background-color: cornsilk;
-    display: flex;
-    width: 30rem;
-    height: 50rem;
-    flex-direction: column;
-    justify-content: flex-end;
+    height: 42rem;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     align-items: center;
     border: 0.05rem;
     border-style: solid;
     border-color: white;
-    /* transform: translate(6rem, 0rem); */
-}
-
-#rowsPlayed {
-    background-color: blue;
-    /* padding: 1rem; */
-}
-
-.game-panel-button {
-    background-color: aqua;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /* transform: translate(10rem, -10rem); */
-}
-
-.game-panel-color-selector {
-    /* background-color: rgb(60, 255, 0);
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 30rem;
-    height: 3rem; */
-    /* transform: translate(10rem, -10rem); */
-}
-
-.row-board {
-    background-color: blueviolet;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
-    /* width: 30rem;
-    height: 4.5rem; */
-    transform: translate(0rem, 0rem);
-}
-
-.palette-game {
-    /* background-color: chartreuse; */
-    position: relative;
-    font-weight: 200;
-    font-size: small;
-    display: flex;
-    flex-direction: column;
-    width: 3rem;
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    border: 0.05rem;
-    border-style: dotted;
-    border-color: white;
-    /* transform: translate(0rem, 1rem); */
-}
-
-
-.checks-container{
-    position: relative;
-    background-color: cornsilk;
-    display: flex;
-    width: 30rem;
-    height: 44rem;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    border: 0.05rem;
-    border-style: solid;
-    border-color: white;
-    transform: translate(6rem, -2rem);
+    transform: translate(0, 0rem);
 }
 
 .col-check-col {
@@ -472,8 +502,11 @@ button {
     justify-content: space-evenly;
     align-content: center;
     border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    width: 2rem;
+    height: 2rem;
 }
 
 .pos-col-check-col {
@@ -492,6 +525,24 @@ button {
     justify-content: flex-end;
     align-content: center;
     border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    width: 2rem;
+    height: 2rem;
+}
+
+.checks-footer{
+    position: relative;
+    background-color: rgb(148, 150, 74);
+    display: flex;
+    width: 20rem;
+    height: 8rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
 }

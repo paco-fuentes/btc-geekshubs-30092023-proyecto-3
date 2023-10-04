@@ -119,16 +119,15 @@ pushToMatrix.addEventListener('click', () => {
     const newRow = document.createElement('div');
     rowsPlayed.appendChild(newRow);
     newRow.innerHTML = `
-    <div id="rowsPlayed" class="row-board">
-        <div class="palette-game" style="background-color:${current1}">1</div>
-        <div class="palette-game" style="background-color:${current2}">2</div>
-        <div class="palette-game" style="background-color:${current3}">3</div>
-        <div class="palette-game" style="background-color:${current4}">4</div>
+    <div class="color-board">
+        <div class="color-cell" style="background-color:${current1}">1</div>
+        <div class="color-cell" style="background-color:${current2}">2</div>
+        <div class="color-cell" style="background-color:${current3}">3</div>
+        <div class="color-cell" style="background-color:${current4}">4</div>
     </div>`;
     const newChecksRow = document.createElement('div');
     checks.appendChild(newChecksRow);
     newChecksRow.innerHTML = `
-    <div id="rowsPlayed" class="row-board">
         <div class="col-check-col" style="background-color:black">
             <div class="is-color" style="background-color:${current1}"></div>
             <div class="is-color" style="background-color:${current2}"></div>
@@ -141,7 +140,7 @@ pushToMatrix.addEventListener('click', () => {
             <div class="is-color-and-pos" style="background-color:${current3}"></div>
             <div class="is-color-and-pos" style="background-color:${current4}"></div>
         </div>
-    </div>`;
+        `;
 })
 
 
