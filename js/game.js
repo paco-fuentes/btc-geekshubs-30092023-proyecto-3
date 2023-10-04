@@ -109,32 +109,34 @@ function refreshCurrent() {
 } 
 
 // played rows
-const gameBoard = document.getElementById('gameBoard');
+const rowsPlayed = document.getElementById('rowsPlayed');
 const pushToMatrix = document.getElementById('pushToMatrix');
 
-// en new row tengo que crear 4 cols
+// print played row
 pushToMatrix.addEventListener('click', () => {
     refreshCurrent();
     const newRow = document.createElement('div');
-    // const newCol1 = document.createElement('div');
-    // newRow.classList.add('palette-game');
-    // newCol.style.backgroundColor = current1;
-    // console.log(current1);
-    gameBoard.appendChild(newRow);
+    rowsPlayed.appendChild(newRow);
     newRow.innerHTML = `
-    <div id="rowsPlayed" class="row-board"> Parent div to allow appendchilds 
-        <div class="palette-game">hola</div>
-        <div class="palette-game">hola</div>
-        <div class="palette-game">hola</div>
-        <div class="palette-game">hola</div>
+    <div id="rowsPlayed" class="row-board">
+        <div class="palette-game" style="background-color:${current1}">1</div>
+        <div class="palette-game" style="background-color:${current2}">2</div>
+        <div class="palette-game" style="background-color:${current3}">3</div>
+        <div class="palette-game" style="background-color:${current4}">4</div>
     </div>`;
 })
+
+
 
 // Nota: agregar id a la clase game table para meter hay una fila con su clase y dentro el inner tex con su clase para que quede bien cuadrado
 // const films = document.getElementById('films')
 // se pueden usar las variables de interpolacion para almacenar los colores
 // contador para los intentos
 
+// const newCol1 = document.createElement('div');
+// newRow.classList.add('palette-game');
+// newCol.style.backgroundColor = current1;
+// console.log(current1);
 
 // fetch('https://ghibliapi.vercel.app/films')
 // .then(result => result.json())

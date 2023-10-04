@@ -273,7 +273,7 @@ button {
 /* game */
 .main-game-container {
     position: relative;
-    background-color: rgb(0, 0, 0);
+    background-color:crimson;
     display: flex;
     width: 60rem;
     height: 60rem;
@@ -286,6 +286,7 @@ button {
     transform: translate(0, 0rem);
 }
 
+/* tablero de datos */
 .game-data-box {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -334,6 +335,7 @@ button {
     transform: translate(0, 0rem);
 }
 
+/* tablero de juego */
 .game-table {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -341,12 +343,27 @@ button {
     width: 30rem;
     height: 56rem;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     border: 0.05rem;
     border-style: solid;
     border-color: white;
     transform: translate(0, 0rem);
+}
+#rowsPlayed{
+    /* position: absolute; */
+    background-color:blue;
+    /* display: flex; */
+    /* width: 30rem; */
+    /* height: 56rem; */
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    /* border: 0.05rem; */
+    /* border-style: solid; */
+    /* border-color: white; */
+    /* transform: translate(0, 0rem); */
+    padding: 1rem;
 }
 
 .game-panel {
@@ -355,11 +372,13 @@ button {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: aqua;
     width: 30rem;
     height: 3rem;
 }
 
 .row-board {
+    background-color: blueviolet;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -368,6 +387,7 @@ button {
 }
 
 .palette-game {
+    background-color: chartreuse;
     position: relative;
     font-weight: 200;
     font-size: small;
