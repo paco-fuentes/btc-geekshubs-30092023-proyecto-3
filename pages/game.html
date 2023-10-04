@@ -15,43 +15,53 @@
 
 <body>
     <div class="main-game-container">
-        <div class="game-data-box">
-            <div class="game-user-data">
-                <div id="userDisplay" class="txt"></div>
-                <div id="paletteDisplay" class="txt"></div>
+        <div class="hud-container">
+            <div class="ms-mind-container">
             </div>
-            <div class="txt">User palette:</div>
-            <div class="current-palette">
-                <div class="palette-game" id="currentPalette1"></div>
-                <div class="palette-game" id="currentPalette2"></div>
-                <div class="palette-game" id="currentPalette3"></div>
-                <div class="palette-game" id="currentPalette4"></div>
+            <div class="game-data-box">
+                <div class="game-user-data">
+                    <div id="userDisplay" class="txt"></div>
+                    <div id="paletteDisplay" class="txt"></div>
+                </div>
+                <div class="txt">User palette:</div>
+                <div class="current-palette">
+                    <div class="palette-game" id="currentPalette1"></div>
+                    <div class="palette-game" id="currentPalette2"></div>
+                    <div class="palette-game" id="currentPalette3"></div>
+                    <div class="palette-game" id="currentPalette4"></div>
+                </div>
+                <div class="txt">Ms. Mind palette: </div>
+                <div class="master-palette">
+                    <div class="palette-game" id="masterPalette1"></div>
+                    <div class="palette-game" id="masterPalette2"></div>
+                    <div class="palette-game" id="masterPalette3"></div>
+                    <div class="palette-game" id="masterPalette4"></div>
+                </div>
+                <div class="button-container-game">
+                    <a href="./color-picker.html">
+                        <div class="button" id="returnGameButton">return</div>
+                    </a>
+                </div>
             </div>
-            <div class="txt">Ms. Mind palette: </div>
-            <div class="master-palette">
-                <div class="palette-game" id="masterPalette1"></div>
-                <div class="palette-game" id="masterPalette2"></div>
-                <div class="palette-game" id="masterPalette3"></div>
-                <div class="palette-game" id="masterPalette4"></div>
-            </div>
-            <div class="button-container-game">
-                <a href="./color-picker.html">
-                    <div class="button" id="returnGameButton">return</div>
-                </a>
-            </div>
-
         </div>
-        <div id="gameBoard" class="game-table">
-            <div id="rowsPlayed"></div>
-            <div id="rowPlayer" class="row-board">
-                <div class="palette-game" id="userPaletteCol1">1</div>
-                <div class="palette-game" id="userPaletteCol2">2</div>
-                <div class="palette-game" id="userPaletteCol3">3</div>
-                <div class="palette-game" id="userPaletteCol4">4</div>
+        <div class="main-board-container">
+            <div id="gameBoard" class="game-table">
+                <div id="rowsPlayed"></div>
             </div>
-            <div class="game-panel">
+            <div class="game-panel-button">
                 <div class="button" id="pushToMatrix">push to matrix</div>
             </div>
+            <div class="game-panel-color-selector">
+                <div id="rowPlayer" class="row-board">
+                    <div class="palette-game" id="userPaletteCol1">1</div>
+                    <div class="palette-game" id="userPaletteCol2">2</div>
+                    <div class="palette-game" id="userPaletteCol3">3</div>
+                    <div class="palette-game" id="userPaletteCol4">4</div>
+                </div>
+            </div>
+        </div>
+        <div class="checks-container">
+            <div id="checks"></div>
         </div>
     </div>
     <script src="../js/game.js"></script>

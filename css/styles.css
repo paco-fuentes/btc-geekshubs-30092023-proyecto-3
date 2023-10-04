@@ -273,12 +273,27 @@ button {
 /* game */
 .main-game-container {
     position: relative;
-    background-color:crimson;
+    background-color: crimson;
     display: flex;
-    width: 60rem;
-    height: 60rem;
+    width: 50rem;
+    height: 50rem;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+.ms-mind-container {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    width: 18rem;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     border: 0.05rem;
     border-style: solid;
@@ -288,8 +303,8 @@ button {
 
 /* tablero de datos */
 .game-data-box {
-    position: relative;
     background-color: rgb(0, 0, 0);
+    position: relative;
     display: flex;
     width: 18rem;
     height: 20rem;
@@ -303,6 +318,7 @@ button {
 }
 
 .game-user-data {
+    background-color: aquamarine;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -313,18 +329,21 @@ button {
 }
 
 .current-palette {
+    background-color: blueviolet;
     position: relative;
     display: flex;
     flex-direction: row;
 }
 
 .master-palette {
+    background-color: beige;
     position: relative;
     display: flex;
     flex-direction: row;
 }
 
 .button-container-game {
+    background-color: aqua;
     position: relative;
     display: flex;
     width: 18rem;
@@ -336,45 +355,58 @@ button {
 }
 
 /* tablero de juego */
-.game-table {
+.main-board-container {
+    background-color: rgb(246, 255, 0);
     position: relative;
-    background-color: rgb(0, 0, 0);
     display: flex;
     width: 30rem;
-    height: 56rem;
+    height: 50rem;
     flex-direction: column;
-    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 0rem);
+}
+
+.game-table {
+    position: relative;
+    background-color: cornsilk;
+    display: flex;
+    width: 30rem;
+    height: 50rem;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     border: 0.05rem;
     border-style: solid;
     border-color: white;
-    transform: translate(0, 0rem);
-}
-#rowsPlayed{
-    /* position: absolute; */
-    background-color:blue;
-    /* display: flex; */
-    /* width: 30rem; */
-    /* height: 56rem; */
-    /* flex-direction: column; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    /* border: 0.05rem; */
-    /* border-style: solid; */
-    /* border-color: white; */
-    /* transform: translate(0, 0rem); */
-    padding: 1rem;
+    /* transform: translate(6rem, 0rem); */
 }
 
-.game-panel {
+#rowsPlayed {
+    background-color: blue;
+    /* padding: 1rem; */
+}
+
+.game-panel-button {
+    background-color: aqua;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: aqua;
+    /* transform: translate(10rem, -10rem); */
+}
+
+.game-panel-color-selector {
+    /* background-color: rgb(60, 255, 0);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 30rem;
-    height: 3rem;
+    height: 3rem; */
+    /* transform: translate(10rem, -10rem); */
 }
 
 .row-board {
@@ -383,22 +415,83 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 24rem;
+    align-content: center;
+    /* width: 30rem;
+    height: 4.5rem; */
+    transform: translate(0rem, 0rem);
 }
 
 .palette-game {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     position: relative;
     font-weight: 200;
     font-size: small;
     display: flex;
-    /* flex-direction: column; */
-    width: 4rem;
-    height: 4rem;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
     align-items: center;
     border: 0.05rem;
     border-style: dotted;
     border-color: white;
-    transform: translate(0, 0rem);
+    /* transform: translate(0rem, 1rem); */
+}
+
+
+.checks-container{
+    position: relative;
+    background-color: cornsilk;
+    display: flex;
+    width: 30rem;
+    height: 44rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(6rem, -2rem);
+}
+
+.col-check-col {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-content: center; */
+
+}
+
+.is-color {
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+
+.pos-col-check-col {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.is-color-and-pos {
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
 }

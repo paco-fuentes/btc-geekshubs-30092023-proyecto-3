@@ -110,6 +110,7 @@ function refreshCurrent() {
 
 // played rows
 const rowsPlayed = document.getElementById('rowsPlayed');
+const checks = document.getElementById('checks');
 const pushToMatrix = document.getElementById('pushToMatrix');
 
 // print played row
@@ -123,6 +124,23 @@ pushToMatrix.addEventListener('click', () => {
         <div class="palette-game" style="background-color:${current2}">2</div>
         <div class="palette-game" style="background-color:${current3}">3</div>
         <div class="palette-game" style="background-color:${current4}">4</div>
+    </div>`;
+    const newChecksRow = document.createElement('div');
+    checks.appendChild(newChecksRow);
+    newChecksRow.innerHTML = `
+    <div id="rowsPlayed" class="row-board">
+        <div class="col-check-col" style="background-color:black">
+            <div class="is-color" style="background-color:${current1}"></div>
+            <div class="is-color" style="background-color:${current2}"></div>
+            <div class="is-color" style="background-color:${current3}"></div>
+            <div class="is-color" style="background-color:${current4}"></div>
+        </div>
+        <div class="pos-col-check-col" style="background-color:white">
+            <div class="is-color-and-pos" style="background-color:${current1}"></div>
+            <div class="is-color-and-pos" style="background-color:${current2}"></div>
+            <div class="is-color-and-pos" style="background-color:${current3}"></div>
+            <div class="is-color-and-pos" style="background-color:${current4}"></div>
+        </div>
     </div>`;
 })
 
