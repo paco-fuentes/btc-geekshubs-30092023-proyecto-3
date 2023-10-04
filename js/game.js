@@ -109,7 +109,7 @@ function refreshCurrent() {
 } 
 
 // played rows
-const rowsPlayed = document.getElementById('rowsPlayed');
+const gameBoard = document.getElementById('gameBoard');
 const pushToMatrix = document.getElementById('pushToMatrix');
 
 // en new row tengo que crear 4 cols
@@ -117,15 +117,17 @@ pushToMatrix.addEventListener('click', () => {
     refreshCurrent();
     const newRow = document.createElement('div');
     // const newCol1 = document.createElement('div');
-    newRow.classList.add('palette-game');
+    // newRow.classList.add('palette-game');
     // newCol.style.backgroundColor = current1;
     // console.log(current1);
-    rowsPlayed.appendChild(newRow);
+    gameBoard.appendChild(newRow);
     newRow.innerHTML = `
-    <div class="palette-game">hola</div>
-    <div class="palette-game">hola</div>
-    <div class="palette-game">hola</div>
-    <div class="palette-game">hola</div>`;
+    <div id="rowsPlayed" class="row-board"> Parent div to allow appendchilds 
+        <div class="palette-game">hola</div>
+        <div class="palette-game">hola</div>
+        <div class="palette-game">hola</div>
+        <div class="palette-game">hola</div>
+    </div>`;
 })
 
 // Nota: agregar id a la clase game table para meter hay una fila con su clase y dentro el inner tex con su clase para que quede bien cuadrado
