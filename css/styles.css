@@ -72,6 +72,21 @@ button {
     cursor: pointer;
 }
 
+.toggle {
+    font-weight: 200;
+    position: relative;
+    font-size: small;
+    display: flex;
+    width: 6rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: dashed;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
 /* index page */
 .relative-container-index {
     position: relative;
