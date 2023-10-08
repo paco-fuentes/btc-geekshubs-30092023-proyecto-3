@@ -19,7 +19,7 @@ let current4;
 
 // current user
 const currentUser = localStorage.getItem("user");
-console.log(currentUser);
+console.log("Usuario-----> " + currentUser);
 const userDisplay = document.getElementById("userDisplay");
 userDisplay.innerHTML = `user ID: ${currentUser}`;
 
@@ -29,20 +29,20 @@ console.log("paleta recuperada en string ---- " + currentPalette);
 
 // current palette en HTML
 const paletteDisplay = document.getElementById("paletteDisplay");
-paletteDisplay.innerHTML = ` ${currentPalette}`;
+paletteDisplay.innerHTML = `${currentPalette}`;
 
 // generador numero aleatorio, modificar a variable para otras dificultades
 const randomNumber = [parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4)];
-console.log(randomNumber);
+console.log("random index pos -----> " + randomNumber);
 
 // current palette string to array
 const currentPaletteColors = currentPalette.split(",");
 console.log("current colors array ---> " + currentPaletteColors);
-console.log("current colors array random pos ---> " + currentPaletteColors[randomNumber]);
+// console.log("current colors array random pos ---> " + currentPaletteColors[randomNumber]);
 
 // pushing random position of current palette to generate a new random palette
 const randomPalette = [currentPaletteColors[randomNumber[0]], currentPaletteColors[randomNumber[1]], currentPaletteColors[randomNumber[2]], currentPaletteColors[randomNumber[3]]];
-console.log(randomPalette);
+console.log("paleta random de Ms Mind ------> " + randomPalette);
 
 // splited colors
 const randomPalettePos1 = randomPalette[0]
@@ -108,6 +108,34 @@ function refreshCurrent() {
     return currentRow = [current1, current2, current3, current4];
 } 
 
+// row checker
+const checkRow = (master, decoder) => {
+    let colorCheck = 0;
+    let posColorCheck = 0;
+    for (let i = 0; i < decoder.length; i++) {
+        const element = decoder[i];
+        const masterIncludes = master.includes(element);
+        if (masterIncludes){
+            colorCheck++;
+        }
+        for (let j = 0; j < master.length; j++) {
+            if (master[i] === decoder[j] && i === j) {
+                colorCheck -= 1;
+                posColorCheck += 1;
+            }
+        }
+    }
+    console.log(`
+    Color checks: ---------> ${colorCheck} 
+    Posiciones iguales: ---> ${posColorCheck}
+    `);
+    if(posColorCheck === master.length && posColorCheck === decoder.length){
+        return console.log("YOU WIN!");
+    }
+}
+
+
+
 // played rows
 const rowsPlayed = document.getElementById('rowsPlayed');
 const checks = document.getElementById('checks');
@@ -115,7 +143,12 @@ const pushToMatrix = document.getElementById('pushToMatrix');
 
 // print played row
 pushToMatrix.addEventListener('click', () => {
-    refreshCurrent();
+    //refreshCurrent();
+    //Logica de coloro / pos y color o ganador aqui...
+    const currentPlayerRow = refreshCurrent();
+    checkRow(randomPalette, currentPlayerRow);
+    console.log("currentPlayerRow - Palette ---- > " + currentPlayerRow); // check current combination
+    console.log("Ms. Mind - Palette ---- > " + randomPalette);
     const newRow = document.createElement('div');
     rowsPlayed.appendChild(newRow);
     newRow.innerHTML = `
@@ -142,33 +175,3 @@ pushToMatrix.addEventListener('click', () => {
         </div>
         `;
 })
-
-
-
-// Nota: agregar id a la clase game table para meter hay una fila con su clase y dentro el inner tex con su clase para que quede bien cuadrado
-// const films = document.getElementById('films')
-// se pueden usar las variables de interpolacion para almacenar los colores
-// contador para los intentos
-
-// const newCol1 = document.createElement('div');
-// newRow.classList.add('palette-game');
-// newCol.style.backgroundColor = current1;
-// console.log(current1);
-
-// fetch('https://ghibliapi.vercel.app/films')
-// .then(result => result.json())
-// .then(result => {
-//   result.forEach(element => {
-//     const title = document.createElement('h1')
-//     const filmImage = document.createElement('img')
-    
-//     filmImage.src = element.image
-
-//     filmImage.classList.add('image-film')
-
-//     title.innerText = element.title
-//     films.appendChild(title)
-//     films.appendChild(filmImage)
-//   });
-// })
-// .catch(error => console.log(error))
