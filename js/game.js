@@ -158,6 +158,11 @@ pushToMatrix.addEventListener('click', () => {
     console.log("blacks ----> " + currentCheckRow.blacks);
     console.log("win? ----> " + currentCheckRow.win);
 
+    for (let i = 0; i < currentCheckRow.blacks; i++) {
+        console.log("black repetidos");
+        
+    }
+
     const newRow = document.createElement('div');
     rowsPlayed.appendChild(newRow);
     newRow.innerHTML = `
