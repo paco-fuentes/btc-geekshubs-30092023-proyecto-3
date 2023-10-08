@@ -52,14 +52,16 @@ reset.addEventListener('click', () => {
     colorSelect2.value = "#000000";
     colorSelect3.value = "#000000";
     colorSelect4.value = "#000000";
-    console.log(selectedPalette);
 })
 play.addEventListener('click', () => {
-    localStorage.setItem('selectedPalette', selectedPalette);
-    // console.log(localStorage.setItem('selectedPalette', selectedPalette.value));
-    //if selected color no es length <=3 y no se repite color enable button
+    if (selectedPalette.length === 4) {
+        localStorage.setItem('selectedPalette', selectedPalette);
+        window.location.href = '../pages/game.html';
+        // console.log(localStorage.setItem('selectedPalette', selectedPalette.value));
+        //if selected color no es length <=3 y no se repite color enable button
+    }
 })
 const currentUser = localStorage.getItem("user");
-console.log(currentUser );
+console.log(currentUser);
 const userDisplay = document.getElementById("userDisplay");
 userDisplay.innerHTML = `Welcome, ${currentUser}, please choose four palette colours to play...`;

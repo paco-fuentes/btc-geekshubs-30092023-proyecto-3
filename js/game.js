@@ -127,13 +127,6 @@ const checkRow = (master, decoder) => {
             }
         }
     }
-    // console.log(`
-    // Color checks: ---------> ${colorCheck} 
-    // Posiciones iguales: ---> ${posColorCheck}
-    // `);
-    // if (posColorCheck === master.length && posColorCheck === decoder.length) {
-    //     return console.log("YOU WIN!");
-    // }
     return {
         blacks: colorCheck,
         whites: posColorCheck,
@@ -166,13 +159,10 @@ pushToMatrix.addEventListener('click', () => {
     console.log("Es gameover ----> " + gameOver);
     if (gameOver === false && win === false) {
         // get current played values
-
         console.log("Ms. Mind - Palette ---- > " + randomPalette);
         console.log("currentPlayerRow - Palette ---- > " + currentPlayerRow); // check current combination
         console.log("whites ----> " + currentCheckRow.whites);
         console.log("blacks ----> " + currentCheckRow.blacks);
-        // console.log("win? ----> " + currentCheckRow.win);
-
         const blackCol = "#000000";
         const blacksRow = [];
         for (let i = 0; i < currentCheckRow.blacks; i++) {
@@ -212,4 +202,3 @@ pushToMatrix.addEventListener('click', () => {
        `;
     }
 })
-
