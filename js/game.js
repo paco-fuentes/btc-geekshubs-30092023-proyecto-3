@@ -134,8 +134,8 @@ const checkRow = (master, decoder) => {
     // if (posColorCheck === master.length && posColorCheck === decoder.length) {
     //     return console.log("YOU WIN!");
     // }
-    return { 
-        blacks: colorCheck, 
+    return {
+        blacks: colorCheck,
         whites: posColorCheck,
         win: posColorCheck === master.length && posColorCheck === decoder.length
     };
@@ -146,46 +146,58 @@ const rowsPlayed = document.getElementById('rowsPlayed');
 const checks = document.getElementById('checks');
 const pushToMatrix = document.getElementById('pushToMatrix');
 
+//tries
+let tries = 10;
+let gameOver = false;
+
 // print played row
 pushToMatrix.addEventListener('click', () => {
-    // get current played values
-    const currentPlayerRow = refreshCurrent();
-    const currentCheckRow = checkRow(randomPalette, currentRow);
-
-    console.log("Ms. Mind - Palette ---- > " + randomPalette);
-    console.log("currentPlayerRow - Palette ---- > " + currentPlayerRow); // check current combination
-    console.log("whites ----> " + currentCheckRow.whites);
-    console.log("blacks ----> " + currentCheckRow.blacks);
-    console.log("win? ----> " + currentCheckRow.win);
-
-    const blackCol = "#000000";
-    const blacksRow = [];
-    for (let i = 0; i < currentCheckRow.blacks; i++) {
-        console.log("black repetidos");
-        blacksRow.push(blackCol);
-
+    tries--;
+    if (tries < 0) {
+        gameOver = true;
+        console.log("gameOver");
     }
+    console.log(tries);
+    console.log(gameOver);
+    if (gameOver === false) {
+        // get current played values
+        const currentPlayerRow = refreshCurrent();
+        const currentCheckRow = checkRow(randomPalette, currentRow);
 
-    const whiteCol = "#FFFFFF";
-    const whitesRow = [];
-    for (let i = 0; i < currentCheckRow.whites; i++) {
-        console.log("whites repetidos");
-        whitesRow.push(whiteCol);
+        console.log("Ms. Mind - Palette ---- > " + randomPalette);
+        console.log("currentPlayerRow - Palette ---- > " + currentPlayerRow); // check current combination
+        console.log("whites ----> " + currentCheckRow.whites);
+        console.log("blacks ----> " + currentCheckRow.blacks);
+        console.log("win? ----> " + currentCheckRow.win);
 
-    }
+        const blackCol = "#000000";
+        const blacksRow = [];
+        for (let i = 0; i < currentCheckRow.blacks; i++) {
+            console.log("black repetidos");
+            blacksRow.push(blackCol);
 
-    const newRow = document.createElement('div');
-    rowsPlayed.appendChild(newRow);
-    newRow.innerHTML = `
-    <div class="color-board">
-        <div class="color-cell" style="background-color:${current1}">1</div>
-        <div class="color-cell" style="background-color:${current2}">2</div>
-        <div class="color-cell" style="background-color:${current3}">3</div>
-        <div class="color-cell" style="background-color:${current4}">4</div>
-    </div>`;
-    const newChecksRow = document.createElement('div');
-    checks.appendChild(newChecksRow);
-    newChecksRow.innerHTML = `
+        }
+
+        const whiteCol = "#FFFFFF";
+        const whitesRow = [];
+        for (let i = 0; i < currentCheckRow.whites; i++) {
+            console.log("whites repetidos");
+            whitesRow.push(whiteCol);
+
+        }
+
+        const newRow = document.createElement('div');
+        rowsPlayed.appendChild(newRow);
+        newRow.innerHTML = `
+        <div class="color-board">
+            <div class="color-cell" style="background-color:${current1}">1</div>
+            <div class="color-cell" style="background-color:${current2}">2</div>
+            <div class="color-cell" style="background-color:${current3}">3</div>
+            <div class="color-cell" style="background-color:${current4}">4</div>
+        </div>`;
+        const newChecksRow = document.createElement('div');
+        checks.appendChild(newChecksRow);
+        newChecksRow.innerHTML = `
         <div class="col-check-col" style="background-color:white">
             <div class="is-color" style="background-color:${blacksRow[0]}"></div>
             <div class="is-color" style="background-color:${blacksRow[1]}"></div>
@@ -198,28 +210,7 @@ pushToMatrix.addEventListener('click', () => {
             <div class="is-color-and-pos" style="background-color:${whitesRow[2]}"></div>
             <div class="is-color-and-pos" style="background-color:${whitesRow[3]}"></div>
         </div>
-        `;
+       `;
+    }
 })
 
-
-
-
-
-
-
-// const newChecksRow = document.createElement('div');
-// checks.appendChild(newChecksRow);
-// newChecksRow.innerHTML = `
-//     <div class="col-check-col" style="background-color:yellow">
-//         <div class="is-color" style="background-color:${current1}"></div>
-//         <div class="is-color" style="background-color:${current1}"></div>
-//         <div class="is-color" style="background-color:${current1}"></div>
-//         <div class="is-color" style="background-color:${current1}"></div>
-//     </div>
-//     <div class="pos-col-check-col" style="background-color:green">
-//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
-//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
-//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
-//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
-//     </div>
-//     `;
