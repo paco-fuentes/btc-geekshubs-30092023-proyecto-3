@@ -158,9 +158,20 @@ pushToMatrix.addEventListener('click', () => {
     console.log("blacks ----> " + currentCheckRow.blacks);
     console.log("win? ----> " + currentCheckRow.win);
 
+    const blackCol = "#000000";
+    const blacksRow = [];
     for (let i = 0; i < currentCheckRow.blacks; i++) {
         console.log("black repetidos");
-        
+        blacksRow.push(blackCol);
+
+    }
+
+    const whiteCol = "#FFFFFF";
+    const whitesRow = [];
+    for (let i = 0; i < currentCheckRow.whites; i++) {
+        console.log("whites repetidos");
+        whitesRow.push(whiteCol);
+
     }
 
     const newRow = document.createElement('div');
@@ -175,17 +186,40 @@ pushToMatrix.addEventListener('click', () => {
     const newChecksRow = document.createElement('div');
     checks.appendChild(newChecksRow);
     newChecksRow.innerHTML = `
-        <div class="col-check-col" style="background-color:yellow">
-            <div class="is-color" style="background-color:${current1}"></div>
-            <div class="is-color" style="background-color:${current1}"></div>
-            <div class="is-color" style="background-color:${current1}"></div>
-            <div class="is-color" style="background-color:${current1}"></div>
+        <div class="col-check-col" style="background-color:white">
+            <div class="is-color" style="background-color:${blacksRow[0]}"></div>
+            <div class="is-color" style="background-color:${blacksRow[1]}"></div>
+            <div class="is-color" style="background-color:${blacksRow[2]}"></div>
+            <div class="is-color" style="background-color:${blacksRow[3]}"></div>
         </div>
-        <div class="pos-col-check-col" style="background-color:green">
-            <div class="is-color-and-pos" style="background-color:${current1}"></div>
-            <div class="is-color-and-pos" style="background-color:${current1}"></div>
-            <div class="is-color-and-pos" style="background-color:${current1}"></div>
-            <div class="is-color-and-pos" style="background-color:${current1}"></div>
+        <div class="pos-col-check-col" style="background-color:black">
+            <div class="is-color-and-pos" style="background-color:${whitesRow[0]}"></div>
+            <div class="is-color-and-pos" style="background-color:${whitesRow[1]}"></div>
+            <div class="is-color-and-pos" style="background-color:${whitesRow[2]}"></div>
+            <div class="is-color-and-pos" style="background-color:${whitesRow[3]}"></div>
         </div>
         `;
 })
+
+
+
+
+
+
+
+// const newChecksRow = document.createElement('div');
+// checks.appendChild(newChecksRow);
+// newChecksRow.innerHTML = `
+//     <div class="col-check-col" style="background-color:yellow">
+//         <div class="is-color" style="background-color:${current1}"></div>
+//         <div class="is-color" style="background-color:${current1}"></div>
+//         <div class="is-color" style="background-color:${current1}"></div>
+//         <div class="is-color" style="background-color:${current1}"></div>
+//     </div>
+//     <div class="pos-col-check-col" style="background-color:green">
+//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
+//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
+//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
+//         <div class="is-color-and-pos" style="background-color:${current1}"></div>
+//     </div>
+//     `;
