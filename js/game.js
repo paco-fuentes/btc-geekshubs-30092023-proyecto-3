@@ -110,6 +110,7 @@ function refreshCurrent() {
 
 // row checker
 const checkRow = (master, decoder) => {
+    console.log("ruleta ----> " + ruleta);
     let colorCheck = 0;
     let posColorCheck = 0;
     for (let i = 0; i < decoder.length; i++) {
@@ -179,10 +180,10 @@ pushToMatrix.addEventListener('click', () => {
         rowsPlayed.appendChild(newRow);
         newRow.innerHTML = `
         <div class="color-board">
-            <div class="color-cell" style="background-color:${current1}">1</div>
-            <div class="color-cell" style="background-color:${current2}">2</div>
-            <div class="color-cell" style="background-color:${current3}">3</div>
-            <div class="color-cell" style="background-color:${current4}">4</div>
+            <div class="color-cell" style="background-color:${current1}"></div>
+            <div class="color-cell" style="background-color:${current2}"></div>
+            <div class="color-cell" style="background-color:${current3}"></div>
+            <div class="color-cell" style="background-color:${current4}"></div>
         </div>`;
         const newChecksRow = document.createElement('div');
         checks.appendChild(newChecksRow);
