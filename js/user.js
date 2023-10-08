@@ -10,23 +10,17 @@ user.addEventListener('input', () => {
         user.value = "David Ochando";
     }
 })
-
 let dificultSelected = "easy";
-
 const checkEasy = document.getElementById("easy")
 checkEasy.addEventListener("click", (event) => {
     dificultSelected = "easy";
     console.log(dificultSelected);
 });
-
 const checkHard = document.getElementById("hard")
 checkHard.addEventListener("click", (event) => {
     dificultSelected = "hard";
     console.log(dificultSelected);
 });
-
-// console.log(dificultSelected);
-
 enter.addEventListener('click', () => {
     localStorage.setItem('user', user.value);
     localStorage.setItem('dificultSelected', dificultSelected);

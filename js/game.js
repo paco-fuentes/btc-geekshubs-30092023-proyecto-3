@@ -3,19 +3,27 @@ const masterPalette1 = document.getElementById('masterPalette1')
 const masterPalette2 = document.getElementById('masterPalette2')
 const masterPalette3 = document.getElementById('masterPalette3')
 const masterPalette4 = document.getElementById('masterPalette4')
+const masterPalette5 = document.getElementById('masterPalette5')
+const masterPalette6 = document.getElementById('masterPalette6')
 const currentPalette1 = document.getElementById('currentPalette1')
 const currentPalette2 = document.getElementById('currentPalette2')
 const currentPalette3 = document.getElementById('currentPalette3')
 const currentPalette4 = document.getElementById('currentPalette4')
+const currentPalette5 = document.getElementById('currentPalette5')
+const currentPalette6 = document.getElementById('currentPalette6')
 const userPaletteCol1 = document.getElementById('userPaletteCol1')
 const userPaletteCol2 = document.getElementById('userPaletteCol2')
 const userPaletteCol3 = document.getElementById('userPaletteCol3')
 const userPaletteCol4 = document.getElementById('userPaletteCol4')
+const userPaletteCol5 = document.getElementById('userPaletteCol5')
+const userPaletteCol6 = document.getElementById('userPaletteCol6')
 let ruleta = 0;
 let current1;
 let current2;
 let current3;
 let current4;
+let current5;
+let current6;
 
 // current user
 const currentUser = localStorage.getItem("user");
@@ -27,12 +35,20 @@ userDisplay.innerHTML = `user ID: ${currentUser}`;
 const currentPalette = localStorage.getItem("selectedPalette");
 // console.log("paleta recuperada en string ---- " + currentPalette);
 
+// current dificult level
+const selectedDificulty = localStorage.getItem("dificultSelected");
+console.log("dificulty level -------> " + selectedDificulty);
+if (selectedDificulty == "easy"){
+    document.getElementById("userPaletteCol5").remove();
+    document.getElementById("userPaletteCol6").remove();
+}
+
 // current palette en HTML
 const paletteDisplay = document.getElementById("paletteDisplay");
 paletteDisplay.innerHTML = `${currentPalette}`;
 
 // generador numero aleatorio, modificar a variable para otras dificultades
-const randomNumber = [parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4)];
+const randomNumber = [parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4)];
 // console.log("random index pos -----> " + randomNumber);
 
 // current palette string to array
@@ -41,7 +57,7 @@ const currentPaletteColors = currentPalette.split(",");
 // console.log("current colors array random pos ---> " + currentPaletteColors[randomNumber]);
 
 // pushing random position of current palette to generate a new random palette
-const randomPalette = [currentPaletteColors[randomNumber[0]], currentPaletteColors[randomNumber[1]], currentPaletteColors[randomNumber[2]], currentPaletteColors[randomNumber[3]]];
+const randomPalette = [currentPaletteColors[randomNumber[0]], currentPaletteColors[randomNumber[1]], currentPaletteColors[randomNumber[2]], currentPaletteColors[randomNumber[3]], currentPaletteColors[randomNumber[4]], currentPaletteColors[randomNumber[5]]];
 // console.log("paleta random de Ms Mind ------> " + randomPalette);
 
 // splited colors
@@ -49,6 +65,9 @@ const randomPalettePos1 = randomPalette[0]
 const randomPalettePos2 = randomPalette[1]
 const randomPalettePos3 = randomPalette[2]
 const randomPalettePos4 = randomPalette[3]
+const randomPalettePos5 = randomPalette[4]
+const randomPalettePos6 = randomPalette[5]
+
 // console.log("palette pos 1 -------> " + randomPalettePos1);
 // console.log("palette pos 2 -------> " + randomPalettePos3);
 // console.log("palette pos 3 -------> " + randomPalettePos4);
@@ -59,12 +78,16 @@ currentPalette1.style.backgroundColor = currentPaletteColors[0];
 currentPalette2.style.backgroundColor = currentPaletteColors[1];
 currentPalette3.style.backgroundColor = currentPaletteColors[2];
 currentPalette4.style.backgroundColor = currentPaletteColors[3];
+currentPalette4.style.backgroundColor = currentPaletteColors[4];
+currentPalette4.style.backgroundColor = currentPaletteColors[5];
 
 // Ms. Mind palette
 masterPalette1.style.backgroundColor = randomPalette[0];
 masterPalette2.style.backgroundColor = randomPalette[1];
 masterPalette3.style.backgroundColor = randomPalette[2];
 masterPalette4.style.backgroundColor = randomPalette[3];
+masterPalette4.style.backgroundColor = randomPalette[4];
+masterPalette4.style.backgroundColor = randomPalette[5];
 
 // button color roulette and current row colours order function
 userPaletteCol1.addEventListener('click', () => {
@@ -103,9 +126,27 @@ userPaletteCol4.addEventListener('click', () => {
     current4 = currentPaletteColors[ruleta];
     refreshCurrent();
 })
+userPaletteCol5.addEventListener('click', () => {
+    ruleta++;
+    if (ruleta > 3) {
+        ruleta = 0;
+    }
+    userPaletteCol5.style.backgroundColor = currentPaletteColors[ruleta];
+    current5 = currentPaletteColors[ruleta];
+    refreshCurrent();
+})
+userPaletteCol6.addEventListener('click', () => {
+    ruleta++;
+    if (ruleta > 3) {
+        ruleta = 0;
+    }
+    userPaletteCol6.style.backgroundColor = currentPaletteColors[ruleta];
+    current6 = currentPaletteColors[ruleta];
+    refreshCurrent();
+})
 function refreshCurrent() {
     // console.log(current1, current2, current3, current4);
-    return currentRow = [current1, current2, current3, current4];
+    return currentRow = [current1, current2, current3, current4, current5, current6];
 }
 
 // row checker
@@ -113,17 +154,38 @@ const checkRow = (master, decoder) => {
     console.log("ruleta ----> " + ruleta);
     let colorCheck = 0;
     let posColorCheck = 0;
-    for (let i = 0; i < decoder.length; i++) {
-        const element = decoder[i];
-        const masterIncludes = master.includes(element);
-        if (masterIncludes) {
-            colorCheck++;
+    if (selectedDificulty === "easy") {
+        for (let i = 0; i < decoder.length; i++) {
+            const element = decoder[i];
+            const masterIncludes = master.includes(element);
+            if (masterIncludes) {
+                colorCheck++;
+            }
+            for (let j = 0; j < master.length; j++) {
+                if (master[i] === decoder[j] && i === j) {
+                    posColorCheck++;
+                    if (masterIncludes) {
+                        colorCheck--;
+                    }
+                }
+            }
         }
-        for (let j = 0; j < master.length; j++) {
-            if (master[i] === decoder[j] && i === j) {
-                posColorCheck++;
-                if (masterIncludes) {
-                    colorCheck--;
+    }
+    if (selectedDificulty === "hard") {
+        master.length = 6;
+        decoder.length = 6;
+        for (let i = 0; i < decoder.length; i++) {
+            const element = decoder[i];
+            const masterIncludes = master.includes(element);
+            if (masterIncludes) {
+                colorCheck++;
+            }
+            for (let j = 0; j < master.length; j++) {
+                if (master[i] === decoder[j] && i === j) {
+                    posColorCheck++;
+                    if (masterIncludes) {
+                        colorCheck--;
+                    }
                 }
             }
         }
@@ -178,16 +240,17 @@ pushToMatrix.addEventListener('click', () => {
         }
         const newRow = document.createElement('div');
         rowsPlayed.appendChild(newRow);
-        newRow.innerHTML = `
+        if (selectedDificulty === "easy") {
+            newRow.innerHTML = `
         <div class="color-board">
             <div class="color-cell" style="background-color:${current1}"></div>
             <div class="color-cell" style="background-color:${current2}"></div>
             <div class="color-cell" style="background-color:${current3}"></div>
             <div class="color-cell" style="background-color:${current4}"></div>
         </div>`;
-        const newChecksRow = document.createElement('div');
-        checks.appendChild(newChecksRow);
-        newChecksRow.innerHTML = `
+            const newChecksRow = document.createElement('div');
+            checks.appendChild(newChecksRow);
+            newChecksRow.innerHTML = `
         <div class="col-check-col" style="background-color:white">
             <div class="is-color" style="background-color:${blacksRow[0]}"></div>
             <div class="is-color" style="background-color:${blacksRow[1]}"></div>
@@ -201,5 +264,37 @@ pushToMatrix.addEventListener('click', () => {
             <div class="is-color-and-pos" style="background-color:${whitesRow[3]}"></div>
         </div>
        `;
+        }
+        if (selectedDificulty === "hard") {
+            newRow.innerHTML = `
+            <div class="color-board">
+                <div class="color-cell" style="background-color:${current1}"></div>
+                <div class="color-cell" style="background-color:${current2}"></div>
+                <div class="color-cell" style="background-color:${current3}"></div>
+                <div class="color-cell" style="background-color:${current4}"></div>
+                <div class="color-cell" style="background-color:${current5}"></div>
+                <div class="color-cell" style="background-color:${current6}"></div>
+            </div>`;
+            const newChecksRow = document.createElement('div');
+            checks.appendChild(newChecksRow);
+            newChecksRow.innerHTML = `
+            <div class="col-check-col" style="background-color:white">
+                <div class="is-color" style="background-color:${blacksRow[0]}"></div>
+                <div class="is-color" style="background-color:${blacksRow[1]}"></div>
+                <div class="is-color" style="background-color:${blacksRow[2]}"></div>
+                <div class="is-color" style="background-color:${blacksRow[3]}"></div>
+                <div class="is-color" style="background-color:${blacksRow[4]}"></div>
+                <div class="is-color" style="background-color:${blacksRow[5]}"></div>
+            </div>
+            <div class="pos-col-check-col" style="background-color:black">
+                <div class="is-color-and-pos" style="background-color:${whitesRow[0]}"></div>
+                <div class="is-color-and-pos" style="background-color:${whitesRow[1]}"></div>
+                <div class="is-color-and-pos" style="background-color:${whitesRow[2]}"></div>
+                <div class="is-color-and-pos" style="background-color:${whitesRow[3]}"></div>
+                <div class="is-color-and-pos" style="background-color:${whitesRow[4]}"></div>
+                <div class="is-color-and-pos" style="background-color:${whitesRow[5]}"></div>
+            </div>
+           `;
+        }
     }
 })
