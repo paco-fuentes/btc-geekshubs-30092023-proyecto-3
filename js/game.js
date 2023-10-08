@@ -149,43 +149,42 @@ const pushToMatrix = document.getElementById('pushToMatrix');
 //tries
 let tries = 10;
 let gameOver = false;
+let win = false;
 
 // print played row
 pushToMatrix.addEventListener('click', () => {
+    const currentPlayerRow = refreshCurrent();
+    const currentCheckRow = checkRow(randomPalette, currentRow);
     tries--;
     if (tries < 0) {
         gameOver = true;
         console.log("gameOver");
     }
+    const win = currentCheckRow.win;
+    console.log("He ganado -----> " + win);
     console.log(tries);
-    console.log(gameOver);
-    if (gameOver === false) {
+    console.log("Es gameover ----> " + gameOver);
+    if (gameOver === false && win === false) {
         // get current played values
-        const currentPlayerRow = refreshCurrent();
-        const currentCheckRow = checkRow(randomPalette, currentRow);
 
         console.log("Ms. Mind - Palette ---- > " + randomPalette);
         console.log("currentPlayerRow - Palette ---- > " + currentPlayerRow); // check current combination
         console.log("whites ----> " + currentCheckRow.whites);
         console.log("blacks ----> " + currentCheckRow.blacks);
-        console.log("win? ----> " + currentCheckRow.win);
+        // console.log("win? ----> " + currentCheckRow.win);
 
         const blackCol = "#000000";
         const blacksRow = [];
         for (let i = 0; i < currentCheckRow.blacks; i++) {
             console.log("black repetidos");
             blacksRow.push(blackCol);
-
         }
-
         const whiteCol = "#FFFFFF";
         const whitesRow = [];
         for (let i = 0; i < currentCheckRow.whites; i++) {
             console.log("whites repetidos");
             whitesRow.push(whiteCol);
-
         }
-
         const newRow = document.createElement('div');
         rowsPlayed.appendChild(newRow);
         newRow.innerHTML = `
