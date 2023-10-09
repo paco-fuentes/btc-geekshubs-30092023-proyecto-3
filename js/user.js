@@ -10,15 +10,33 @@ user.addEventListener('input', () => {
         user.value = "David Ochando";
     }
 })
-let dificultSelected = "easy";
 const checkEasy = document.getElementById("easy")
+const checkHard = document.getElementById("hard")
+let dificultSelected = "easy";
+if (dificultSelected === "easy"){
+    checkEasy.style.backgroundColor = "white";
+    checkEasy.style.color = "black";
+    checkHard.style.backgroundColor = "black";
+    checkHard.style.color = "white";
+}
 checkEasy.addEventListener("click", (event) => {
     dificultSelected = "easy";
+    if (dificultSelected === "easy"){
+        checkEasy.style.backgroundColor = "white";
+        checkEasy.style.color = "black";
+        checkHard.style.backgroundColor = "black";
+        checkHard.style.color = "white";
+    }
     console.log(dificultSelected);
 });
-const checkHard = document.getElementById("hard")
 checkHard.addEventListener("click", (event) => {
     dificultSelected = "hard";
+    if (dificultSelected === "hard"){
+        checkEasy.style.backgroundColor = "black";
+        checkEasy.style.color = "white";
+        checkHard.style.backgroundColor = "white";
+        checkHard.style.color = "black"; 
+    }
     console.log(dificultSelected);
 });
 enter.addEventListener('click', () => {
