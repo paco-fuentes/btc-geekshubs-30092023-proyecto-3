@@ -142,12 +142,12 @@ button {
     background-color: rgb(0, 0, 0);
     display: flex;
     width: 40rem;
-    height: 28rem;
+    height: 48rem;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 0.05rem;
-    border-style: solid;
+    border: 1rem;
+    border-style:groove;
     border-color: white;
     transform: translate(0, 0rem);
 }
@@ -157,16 +157,17 @@ button {
     display: flex;
     width: 40rem;
     height: 3rem;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 3rem;
+    /* flex-direction: row; */
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    padding-left: 8rem;
     transform: translate(0, 0rem);
 }
 
 .text-help {
     text-align: left;
-    padding: 2rem;
+    font-weight: 200;
+    padding: 4rem;
 }
 
 /* user page */
