@@ -297,7 +297,7 @@ pushToMatrix.addEventListener('click', () => {
     tries--;
     if (tries <= 0) {
         gameOver = true;
-        // document.getElementById("gameover").style.display = "initial";
+        document.getElementById("gameover").style.display = "initial";
         document.getElementById("pushToMatrix").disabled = true;
         console.log("gameOver");
     }
