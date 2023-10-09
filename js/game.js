@@ -295,7 +295,7 @@ pushToMatrix.addEventListener('click', () => {
     }
     const currentCheckRow = checkRow(randomPalette, currentRow);
     tries--;
-    if (tries <= 0) {
+    if (tries < 0) {
         gameOver = true;
         document.getElementById("gameover").style.display = "initial";
         document.getElementById("pushToMatrix").disabled = true;
