@@ -454,6 +454,21 @@ button {
     transform: translate(0, 0rem);
 }
 
+.color-cell-hard{
+    position: relative;
+    /* background-color: rgb(9, 48, 77); */
+    display: flex;
+    width: 3.3rem;
+    height: 3.3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
 /* right container */
 .checks-container-main{
     position: relative;
@@ -522,6 +537,35 @@ button {
     transform: translate(0, 0.5rem);
 }
 
+.col-check-col-hard {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-content: center; */
+    width: 10rem;
+    height: 1.65rem;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: black;
+}
+
+.is-color-hard {
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    border-radius: 50%;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: black;
+    width: 0.7rem;
+    height: 0.7rem;
+    transform: translate(0, 0.5rem);
+}
+
 .pos-col-check-col {
     position: relative;
     display: flex;
@@ -548,6 +592,35 @@ button {
     border-color: white;
     width: 1rem;
     height: 1rem;
+    transform: translate(0, 0.5rem);
+}
+
+.pos-col-check-col-hard {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-content: center; */
+    width: 10rem;
+    height: 1.65rem;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: black;
+}
+
+.is-color-and-pos-hard {
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    border-radius: 50%;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    width: 0.7rem;
+    height: 0.7rem;
     transform: translate(0, 0.5rem);
 }
 

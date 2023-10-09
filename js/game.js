@@ -43,6 +43,21 @@ if (selectedDificulty == "easy"){
     document.getElementById("userPaletteCol6").remove();
 }
 
+if (selectedDificulty == "hard"){
+    userPaletteCol1.style.height = "3.3rem";
+    userPaletteCol2.style.height = "3.3rem";
+    userPaletteCol3.style.height = "3.3rem";
+    userPaletteCol4.style.height = "3.3rem";
+    userPaletteCol5.style.height = "3.3rem";
+    userPaletteCol6.style.height = "3.3rem";
+    userPaletteCol1.style.width = "3.3rem";
+    userPaletteCol2.style.width = "3.3rem";
+    userPaletteCol3.style.width = "3.3rem";
+    userPaletteCol4.style.width = "3.3rem";
+    userPaletteCol5.style.width = "3.3rem";
+    userPaletteCol6.style.width = "3.3rem";
+}
+
 // current palette en HTML
 const paletteDisplay = document.getElementById("paletteDisplay");
 paletteDisplay.innerHTML = `${currentPalette}`;
@@ -206,7 +221,9 @@ const pushToMatrix = document.getElementById('pushToMatrix');
 let tries = 10;
 let gameOver = false;
 let win = false;
-
+if (selectedDificulty == "hard"){
+    tries = 12;
+}
 // print played row
 pushToMatrix.addEventListener('click', () => {
     const currentPlayerRow = refreshCurrent();
@@ -268,31 +285,31 @@ pushToMatrix.addEventListener('click', () => {
         if (selectedDificulty === "hard") {
             newRow.innerHTML = `
             <div class="color-board">
-                <div class="color-cell" style="background-color:${current1}"></div>
-                <div class="color-cell" style="background-color:${current2}"></div>
-                <div class="color-cell" style="background-color:${current3}"></div>
-                <div class="color-cell" style="background-color:${current4}"></div>
-                <div class="color-cell" style="background-color:${current5}"></div>
-                <div class="color-cell" style="background-color:${current6}"></div>
+                <div class="color-cell-hard" style="background-color:${current1}"></div>
+                <div class="color-cell-hard" style="background-color:${current2}"></div>
+                <div class="color-cell-hard" style="background-color:${current3}"></div>
+                <div class="color-cell-hard" style="background-color:${current4}"></div>
+                <div class="color-cell-hard" style="background-color:${current5}"></div>
+                <div class="color-cell-hard" style="background-color:${current6}"></div>
             </div>`;
             const newChecksRow = document.createElement('div');
             checks.appendChild(newChecksRow);
             newChecksRow.innerHTML = `
-            <div class="col-check-col" style="background-color:white">
-                <div class="is-color" style="background-color:${blacksRow[0]}"></div>
-                <div class="is-color" style="background-color:${blacksRow[1]}"></div>
-                <div class="is-color" style="background-color:${blacksRow[2]}"></div>
-                <div class="is-color" style="background-color:${blacksRow[3]}"></div>
-                <div class="is-color" style="background-color:${blacksRow[4]}"></div>
-                <div class="is-color" style="background-color:${blacksRow[5]}"></div>
+            <div class="col-check-col-hard" style="background-color:white">
+                <div class="is-color-hard" style="background-color:${blacksRow[0]}"></div>
+                <div class="is-color-hard" style="background-color:${blacksRow[1]}"></div>
+                <div class="is-color-hard" style="background-color:${blacksRow[2]}"></div>
+                <div class="is-color-hard" style="background-color:${blacksRow[3]}"></div>
+                <div class="is-color-hard" style="background-color:${blacksRow[4]}"></div>
+                <div class="is-color-hard" style="background-color:${blacksRow[5]}"></div>
             </div>
-            <div class="pos-col-check-col" style="background-color:black">
-                <div class="is-color-and-pos" style="background-color:${whitesRow[0]}"></div>
-                <div class="is-color-and-pos" style="background-color:${whitesRow[1]}"></div>
-                <div class="is-color-and-pos" style="background-color:${whitesRow[2]}"></div>
-                <div class="is-color-and-pos" style="background-color:${whitesRow[3]}"></div>
-                <div class="is-color-and-pos" style="background-color:${whitesRow[4]}"></div>
-                <div class="is-color-and-pos" style="background-color:${whitesRow[5]}"></div>
+            <div class="pos-col-check-col-hard" style="background-color:black">
+                <div class="is-color-and-pos-hard" style="background-color:${whitesRow[0]}"></div>
+                <div class="is-color-and-pos-hard" style="background-color:${whitesRow[1]}"></div>
+                <div class="is-color-and-pos-hard" style="background-color:${whitesRow[2]}"></div>
+                <div class="is-color-and-pos-hard" style="background-color:${whitesRow[3]}"></div>
+                <div class="is-color-and-pos-hard" style="background-color:${whitesRow[4]}"></div>
+                <div class="is-color-and-pos-hard" style="background-color:${whitesRow[5]}"></div>
             </div>
            `;
         }
