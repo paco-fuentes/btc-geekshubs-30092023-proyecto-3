@@ -9,7 +9,6 @@ const palette4 = document.getElementById('palette4')
 const reset = document.getElementById('reset')
 const play = document.getElementById('play')
 let selectedPalette = [];
-// color-picker
 colorSelect1.addEventListener('input', () => {
     palette1.style.backgroundColor = colorSelect1.value;
     if (selectedPalette[0] === undefined || selectedPalette[0] === selectedPalette[0]) {
@@ -57,11 +56,8 @@ play.addEventListener('click', () => {
     if (selectedPalette.length === 4) {
         localStorage.setItem('selectedPalette', selectedPalette);
         window.location.href = '../pages/game.html';
-        // console.log(localStorage.setItem('selectedPalette', selectedPalette.value));
-        //if selected color no es length <=3 y no se repite color enable button
     }
 })
 const currentUser = localStorage.getItem("user");
-console.log(currentUser);
 const userDisplay = document.getElementById("userDisplay");
 userDisplay.innerHTML = `Welcome, ${currentUser}, please choose four palette colours to play...`;

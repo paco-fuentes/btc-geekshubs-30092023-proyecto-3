@@ -1,10 +1,6 @@
-/* ajustes globales */
 html {
     -webkit-text-size-adjust: 100%;
-    /* Con esta lÃ­nea se quita el boqueo de txt pequeÃ±o reajustado en ios */
 }
-
-/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap'); */
 
 body {
     margin: 0;
@@ -32,15 +28,12 @@ button {
     visibility: hidden;
 }
 
-/* cambiar a ingles */
 .titulo {
-    /* weight --> ExtraLight = 200 */
     font-weight: 300;
     font-size: larger;
 }
 
 .title-center {
-    /* weight --> ExtraLight = 200 */
     text-align: center;
     font-weight: 600;
     font-size:xx-large;
@@ -58,14 +51,12 @@ button {
 }
 
 .txt-center-2 {
-    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: 600;
     font-size: small;
     text-align: center;
 }
 
 .txt-center-3 {
-    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: 200;
     font-size:medium;
     text-align: center;
@@ -108,7 +99,6 @@ button {
     cursor: pointer;
 }
 
-/* index page */
 .relative-container-index {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -118,7 +108,6 @@ button {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* text-align: center; */
     border: 2rem;
     border-style:ridge;
     border-color: white;
@@ -136,7 +125,6 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* rules page */
 .relative-container-help {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -157,9 +145,6 @@ button {
     display: flex;
     width: 40rem;
     height: 3rem;
-    /* flex-direction: row; */
-    /* justify-content: flex-start; */
-    /* align-items: center; */
     padding-left: 8rem;
     transform: translate(0, 0rem);
 }
@@ -170,7 +155,6 @@ button {
     padding: 4rem;
 }
 
-/* user page */
 .relative-container-id {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -225,7 +209,6 @@ button {
     cursor: pointer;
 }
 
-/* color-picker page */
 .col-picker-container {
     position: absolute;
     background-color: rgb(0, 0, 0, 0);
@@ -247,7 +230,6 @@ button {
 
 .user-color {
     position: relative;
-    /* background-color: blue; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -258,9 +240,7 @@ button {
 }
 
 .palette-container {
-    /* background-color: blueviolet; */
     position: relative;
-    /* background-color: rgb(0, 0, 0, 0); */
     display: flex;
     width: 40rem;
     height: 16rem;
@@ -274,7 +254,6 @@ button {
 }
 
 .button-color-picker-container {
-    /* background-color: aqua; */
     position: relative;
     display: flex;
     width: 40rem;
@@ -324,10 +303,8 @@ button {
     cursor: pointer;
 }
 
-/* game */
 .main-game-header{
     position: relative;
-    /* background-color: crimson; */
     display: flex;
     width: 100%;
     height: 4rem;
@@ -342,7 +319,6 @@ button {
 
 .main-game-container {
     position: relative;
-    /* background-color: crimson; */
     display: flex;
     width: 100%;
     height: 100%;
@@ -355,10 +331,8 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* left container */
 .hud-container{
     position: relative;
-    /* background-color: rgb(84, 255, 49); */
     display: flex;
     width: 20rem;
     height: 50rem;
@@ -371,10 +345,8 @@ button {
     transform: translate(0rem, 0rem);
 }
 
-/* left container --- 1 */
 .ms-mind-container{
     position: relative;
-    /* background-color: rgb(255, 49, 241); */
     display: flex;
     width: 18rem;
     height: 20rem;
@@ -387,26 +359,21 @@ button {
     transform: translate(0rem, 0rem);
 }
 
-/* left container --- 2 */
 .game-data-box{
     position: relative;
-    /* background-color: rgb(255, 49, 241); */
     display: flex;
     width: 18rem;
     height: 20rem;
     flex-direction: column;
     justify-content: space-evenly;
-    /* align-items: center; */
     border: 0.05rem;
     border-style: solid;
     border-color: white;
     transform: translate(0, 0rem);
 }
 
-/* left container --- 3 */
 .button-container-game{
     position: relative;
-    /* background-color: rgb(255, 49, 241); */
     display: flex;
     width: 18rem;
     height: 5rem;
@@ -419,10 +386,8 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* center container - main*/
 .main-board-container{
     position: relative;
-    /* background-color: rgb(49, 166, 255); */
     display: flex;
     width: 30rem;
     height: 50rem;
@@ -435,10 +400,8 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* center container --- 1 */
 .game-table{
     position: relative;
-    /* background-color: rgb(9, 48, 77); */
     display: flex;
     width: 28rem;
     height: 42rem;
@@ -452,10 +415,8 @@ button {
     padding-bottom: 0.5rem;
 }
 
-/* center container --- 2 */
 .game-panel-color-selector{
     position: relative;
-    /* background-color: rgb(9, 48, 77); */
     display: flex;
     width: 28rem;
     height: 5rem;
@@ -468,20 +429,16 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* center container --- 2 ---- color-board*/
 .color-board{
     position: relative;
-    /* background-color: rgb(83, 172, 240); */
     display: flex;
     border: 0.05rem;
     border-style: solid;
     border-color: white;
 }
 
-/* center container --- 2 ---- color cell*/
 .color-cell{
     position: relative;
-    /* background-color: rgb(9, 48, 77); */
     display: flex;
     width: 4rem;
     height: 4rem;
@@ -496,7 +453,6 @@ button {
 
 .color-cell-hard{
     position: relative;
-    /* background-color: rgb(9, 48, 77); */
     display: flex;
     width: 3.3rem;
     height: 3.3rem;
@@ -509,10 +465,8 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* right container */
 .checks-container-main{
     position: relative;
-    /* background-color: rgb(253, 255, 186); */
     display: flex;
     width: 18rem;
     height: 50rem;
@@ -527,7 +481,6 @@ button {
 
 .checks-board{
     position: relative;
-    /* background-color: rgb(236, 163, 74); */
     display: flex;
     width: 16rem;
     height: 42rem;
@@ -554,7 +507,6 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-content: center; */
     width: 10rem;
     height: 2rem;
     border: 0.05rem;
@@ -583,7 +535,6 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-content: center; */
     width: 10rem;
     height: 1.65rem;
     border: 0.05rem;
@@ -612,7 +563,6 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-content: center; */
     width: 10rem;
     height: 2rem;
     border: 0.05rem;
@@ -641,7 +591,6 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-content: center; */
     width: 10rem;
     height: 1.65rem;
     border: 0.05rem;
@@ -665,26 +614,19 @@ button {
     transform: translate(0, 0.5rem);
 }
 
-/* right container --- 3 */
 .checks-footer{
     position: relative;
-    /* background-color: rgb(148, 150, 74); */
     display: flex;
     width: 18rem;
     height: 5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 0.05rem;
-    border-style: solid;
-    border-color: white; */
     transform: translate(0, 0rem);
 }
 
-/* right container --- 3 */
 .game-panel-button{
     position: relative;
-    /* background-color: rgb(9, 48, 77); */
     display: flex;
     width: 16rem;
     height: 5rem;
@@ -727,7 +669,6 @@ button {
     transform: translate(0, 0rem);
 }
 
-/* center container --- 2 ---- color-board*/
 .master-palette{
     position: relative;
     width: 40rem;
@@ -737,10 +678,8 @@ button {
     justify-content: center;
 }
 
-/* center container --- 2 ---- color cell*/
 .palette-game{
     position: relative;
-    /* background-color: rgb(9, 48, 77); */
     display: flex;
     width: 4rem;
     height: 4rem;

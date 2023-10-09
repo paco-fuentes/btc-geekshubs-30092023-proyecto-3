@@ -1,8 +1,6 @@
-// user
 document.getElementById("enter").disabled = true;
 const user = document.getElementById('user')
 user.addEventListener('input', () => {
-    console.log(user.value);
     if (user.value.length > 1) {
         document.getElementById("enter").disabled = false;
     }
@@ -27,7 +25,6 @@ checkEasy.addEventListener("click", (event) => {
         checkHard.style.backgroundColor = "black";
         checkHard.style.color = "white";
     }
-    console.log(dificultSelected);
 });
 checkHard.addEventListener("click", (event) => {
     dificultSelected = "hard";
@@ -37,7 +34,6 @@ checkHard.addEventListener("click", (event) => {
         checkHard.style.backgroundColor = "white";
         checkHard.style.color = "black"; 
     }
-    console.log(dificultSelected);
 });
 enter.addEventListener('click', () => {
     localStorage.setItem('user', user.value);
