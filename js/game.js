@@ -5,12 +5,18 @@ const masterPalette3 = document.getElementById('masterPalette3')
 const masterPalette4 = document.getElementById('masterPalette4')
 const masterPalette5 = document.getElementById('masterPalette5')
 const masterPalette6 = document.getElementById('masterPalette6')
-const currentPalette1 = document.getElementById('currentPalette1')
-const currentPalette2 = document.getElementById('currentPalette2')
-const currentPalette3 = document.getElementById('currentPalette3')
-const currentPalette4 = document.getElementById('currentPalette4')
-const currentPalette5 = document.getElementById('currentPalette5')
-const currentPalette6 = document.getElementById('currentPalette6')
+const masterPalette1win = document.getElementById('masterPalette1win')
+const masterPalette2win = document.getElementById('masterPalette2win')
+const masterPalette3win = document.getElementById('masterPalette3win')
+const masterPalette4win = document.getElementById('masterPalette4win')
+const masterPalette5win = document.getElementById('masterPalette5win')
+const masterPalette6win = document.getElementById('masterPalette6win')
+// const currentPalette1 = document.getElementById('currentPalette1')
+// const currentPalette2 = document.getElementById('currentPalette2')
+// const currentPalette3 = document.getElementById('currentPalette3')
+// const currentPalette4 = document.getElementById('currentPalette4')
+// const currentPalette5 = document.getElementById('currentPalette5')
+// const currentPalette6 = document.getElementById('currentPalette6')
 const userPaletteCol1 = document.getElementById('userPaletteCol1')
 const userPaletteCol2 = document.getElementById('userPaletteCol2')
 const userPaletteCol3 = document.getElementById('userPaletteCol3')
@@ -38,12 +44,18 @@ const currentPalette = localStorage.getItem("selectedPalette");
 // current dificult level
 const selectedDificulty = localStorage.getItem("dificultSelected");
 console.log("dificulty level -------> " + selectedDificulty);
-if (selectedDificulty == "easy"){
+if (selectedDificulty === "easy") {
     document.getElementById("userPaletteCol5").remove();
     document.getElementById("userPaletteCol6").remove();
+    document.getElementById("masterPalette5").remove();
+    document.getElementById("masterPalette6").remove();
+    document.getElementById("masterPalette5win").remove();
+    document.getElementById("masterPalette6win").remove();
+    // document.getElementById("currentPalette5").remove();
+    // document.getElementById("currentPalette6").remove();
 }
 
-if (selectedDificulty == "hard"){
+if (selectedDificulty === "hard") {
     userPaletteCol1.style.height = "3.3rem";
     userPaletteCol2.style.height = "3.3rem";
     userPaletteCol3.style.height = "3.3rem";
@@ -63,7 +75,14 @@ const paletteDisplay = document.getElementById("paletteDisplay");
 paletteDisplay.innerHTML = `${currentPalette}`;
 
 // generador numero aleatorio, modificar a variable para otras dificultades
-const randomNumber = [parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4), parseInt(Math.random() * 4)];
+const randomNumber = [
+    parseInt(Math.random() * 4),
+    parseInt(Math.random() * 4),
+    parseInt(Math.random() * 4),
+    parseInt(Math.random() * 4),
+    parseInt(Math.random() * 4),
+    parseInt(Math.random() * 4)
+];
 // console.log("random index pos -----> " + randomNumber);
 
 // current palette string to array
@@ -72,7 +91,25 @@ const currentPaletteColors = currentPalette.split(",");
 // console.log("current colors array random pos ---> " + currentPaletteColors[randomNumber]);
 
 // pushing random position of current palette to generate a new random palette
-const randomPalette = [currentPaletteColors[randomNumber[0]], currentPaletteColors[randomNumber[1]], currentPaletteColors[randomNumber[2]], currentPaletteColors[randomNumber[3]], currentPaletteColors[randomNumber[4]], currentPaletteColors[randomNumber[5]]];
+if (selectedDificulty === "easy") {
+ randomPalette = [
+    currentPaletteColors[randomNumber[0]],
+    currentPaletteColors[randomNumber[1]],
+    currentPaletteColors[randomNumber[2]],
+    currentPaletteColors[randomNumber[3]]
+];
+}
+
+if (selectedDificulty === "hard") {
+    randomPalette = [
+        currentPaletteColors[randomNumber[0]],
+        currentPaletteColors[randomNumber[1]],
+        currentPaletteColors[randomNumber[2]],
+        currentPaletteColors[randomNumber[3]],
+        currentPaletteColors[randomNumber[4]],
+        currentPaletteColors[randomNumber[5]]
+    ]
+}
 // console.log("paleta random de Ms Mind ------> " + randomPalette);
 
 // splited colors
@@ -80,8 +117,10 @@ const randomPalettePos1 = randomPalette[0]
 const randomPalettePos2 = randomPalette[1]
 const randomPalettePos3 = randomPalette[2]
 const randomPalettePos4 = randomPalette[3]
-const randomPalettePos5 = randomPalette[4]
-const randomPalettePos6 = randomPalette[5]
+if (selectedDificulty === "hard") {
+    const randomPalettePos5 = randomPalette[4]
+    const randomPalettePos6 = randomPalette[5]
+}
 
 // console.log("palette pos 1 -------> " + randomPalettePos1);
 // console.log("palette pos 2 -------> " + randomPalettePos3);
@@ -89,20 +128,33 @@ const randomPalettePos6 = randomPalette[5]
 // console.log("palette pos 4 -------> " + randomPalettePos2);
 
 // current palette
-currentPalette1.style.backgroundColor = currentPaletteColors[0];
-currentPalette2.style.backgroundColor = currentPaletteColors[1];
-currentPalette3.style.backgroundColor = currentPaletteColors[2];
-currentPalette4.style.backgroundColor = currentPaletteColors[3];
-currentPalette4.style.backgroundColor = currentPaletteColors[4];
-currentPalette4.style.backgroundColor = currentPaletteColors[5];
+// currentPalette1.style.backgroundColor = currentPaletteColors[0];
+// currentPalette2.style.backgroundColor = currentPaletteColors[1];
+// currentPalette3.style.backgroundColor = currentPaletteColors[2];
+// currentPalette4.style.backgroundColor = currentPaletteColors[3];
+// if (selectedDificulty === "hard") {
+//     currentPalette5.style.backgroundColor = currentPaletteColors[4];
+//     currentPalette6.style.backgroundColor = currentPaletteColors[5];
+// }
 
 // Ms. Mind palette
 masterPalette1.style.backgroundColor = randomPalette[0];
 masterPalette2.style.backgroundColor = randomPalette[1];
 masterPalette3.style.backgroundColor = randomPalette[2];
 masterPalette4.style.backgroundColor = randomPalette[3];
-masterPalette4.style.backgroundColor = randomPalette[4];
-masterPalette4.style.backgroundColor = randomPalette[5];
+if (selectedDificulty === "hard") {
+    masterPalette5.style.backgroundColor = randomPalette[4];
+    masterPalette6.style.backgroundColor = randomPalette[5];
+}
+
+masterPalette1win.style.backgroundColor = randomPalette[0];
+masterPalette2win.style.backgroundColor = randomPalette[1];
+masterPalette3win.style.backgroundColor = randomPalette[2];
+masterPalette4win.style.backgroundColor = randomPalette[3];
+if (selectedDificulty === "hard") {
+    masterPalette5win.style.backgroundColor = randomPalette[4];
+    masterPalette6win.style.backgroundColor = randomPalette[5];
+}
 
 // button color roulette and current row colours order function
 userPaletteCol1.addEventListener('click', () => {
@@ -161,7 +213,14 @@ userPaletteCol6.addEventListener('click', () => {
 })
 function refreshCurrent() {
     // console.log(current1, current2, current3, current4);
-    return currentRow = [current1, current2, current3, current4, current5, current6];
+    return currentRow = [
+        current1,
+        current2,
+        current3,
+        current4,
+        current5,
+        current6
+    ];
 }
 
 // row checker
@@ -221,19 +280,32 @@ const pushToMatrix = document.getElementById('pushToMatrix');
 let tries = 10;
 let gameOver = false;
 let win = false;
-if (selectedDificulty == "hard"){
+if (selectedDificulty == "hard") {
     tries = 12;
 }
+
+document.getElementById("gameover").style.display = "none";
+document.getElementById("winner").style.display = "none";
+
 // print played row
 pushToMatrix.addEventListener('click', () => {
     const currentPlayerRow = refreshCurrent();
+    if (selectedDificulty == "easy") {
+        currentPlayerRow.length=4;
+    }
     const currentCheckRow = checkRow(randomPalette, currentRow);
     tries--;
-    if (tries < 0) {
+    if (tries <= 0) {
         gameOver = true;
+        // document.getElementById("gameover").style.display = "initial";
+        document.getElementById("pushToMatrix").disabled = true;
         console.log("gameOver");
     }
     const win = currentCheckRow.win;
+    if(win){
+        document.getElementById("winner").style.display = "initial";
+        document.getElementById("pushToMatrix").disabled = true;
+    }
     console.log("He ganado -----> " + win);
     console.log(tries);
     console.log("Es gameover ----> " + gameOver);

@@ -7,7 +7,7 @@ user.addEventListener('input', () => {
         document.getElementById("enter").disabled = false;
     }
     if (user.value.length > 13) {
-        user.value = "David Ochando";
+        user.value = "Dani Tarazona";
     }
 })
 const checkEasy = document.getElementById("easy")

@@ -28,6 +28,10 @@ button {
     all: unset;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
 .titulo {
     /* weight --> ExtraLight = 200 */
     font-weight: 300;
@@ -37,6 +41,19 @@ button {
 .txt {
     font-weight: 200;
     font-size: small;
+}
+
+.txt-center {
+    font-weight: 200;
+    font-size: small;
+    text-align: center;
+}
+
+.txt-center-2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: small;
+    text-align: center;
 }
 
 .button {
@@ -649,6 +666,62 @@ button {
     display: flex;
     width: 16rem;
     height: 5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: solid;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+#gameover{
+    position: absolute;
+    background-color: #000000;
+    display: flex;
+    width: 40rem;
+    height: 38rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1rem;
+    border-style:groove;
+    border-color: #ffffff;
+    transform: translate(0, 0rem);
+}
+
+#winner{
+    position: absolute;
+    background-color: #000000;
+    display: flex;
+    width: 40rem;
+    height: 28rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1rem;
+    border-style:groove;
+    border-color: #ffffff;
+    transform: translate(0, 0rem);
+}
+
+/* center container --- 2 ---- color-board*/
+.master-palette{
+    position: relative;
+    width: 40rem;
+    height: 4rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+/* center container --- 2 ---- color cell*/
+.palette-game{
+    position: relative;
+    /* background-color: rgb(9, 48, 77); */
+    display: flex;
+    width: 4rem;
+    height: 4rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
