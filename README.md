@@ -58,7 +58,35 @@ Link => [Mastermind]().
 
 ### Bugs Conocidos a la entrega del proyecto
 
-1. 
+<pre style="text-align: center">
+
+                                |     |
+                                \\_V_//
+                                \/=|=\/
+                                 [=v=]
+                               __\___/_____
+                              /..[  _____  ]
+                             /_  [ [  M /] ]
+                            /../.[ [ M /@] ]
+                           <-->[_[ [M /@/] ]
+                          /../ [.[ [ /@/ ] ]
+     _________________]\ /__/  [_[ [/@/ C] ]
+    <_________________>>0---]  [=\ \@/ C / /
+       ___      ___   ]/000o   /__\ \ C / /
+          \    /              /....\ \_/ /
+       ....\||/....           [___/=\___/
+      .    .  .    .          [...] [...]
+     .      ..      .         [___/ \___]
+     .    0 .. 0    .         <---> <--->
+  /\/\.    .  .    ./\/\      [..]   [..]
+ / / / .../|  |\... \ \ \    _[__]   [__]_
+/ / /       \/       \ \ \  [____>   <____]
+
+</pre>
+
+1. Los botones de la paleta de colores aveces se tienen que pulsar mas de una vez. Parece estar relacionado con la posición del array de la anterior fila con el numero de clicks de la fila actual.
+
+2. Si introduces el nombre y luego lo borras te deja entrar con el campo de usuario vacio. ¿Ya no es undefined?
 
 ### Logros y soluciones:
 
@@ -79,7 +107,37 @@ Quedan pendientes las siguientes propuestas:
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para obtener más detalles.
 
+<pre style="text-align: center">
+
+(\ 
+\'\ 
+ \'\     __________  
+ / '|   ()_________)
+ \ '/    \ ~~~~~~~~ \
+   \       \ ~~~~~~   \
+   ==).      \__________\
+  (__)       ()__________)
+
+  </pre>
+
 ---
 
 ### Autor
 Paco Fuentes
+
+<pre style="text-align: center">       
+
+..--""|
+       |     |
+       | .---'
+ (\-.--| |-----------.
+/ \) \ | |            \
+|:.  | | |             |
+                           |:.  | |o| E - M A I L |    ----- > pacofuentes.work@gmail.com
+|:.  | `"`             |
+|:.  |_  __   __ _  __ /
+`""""`""""|=`|"""""""`
+          |=_|
+          |= |
+
+</pre>
