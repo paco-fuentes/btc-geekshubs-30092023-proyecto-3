@@ -390,8 +390,8 @@ button {
     display: flex;
     width: 18rem;
     height: 5rem;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     border: 0.05rem;
     border-style: solid;
@@ -429,6 +429,7 @@ button {
     border-style: solid;
     border-color: white;
     transform: translate(0, 0rem);
+    padding-bottom: 0.5rem;
 }
 
 /* center container --- 2 */
@@ -517,6 +518,7 @@ button {
     border-style: solid;
     border-color: white;
     transform: translate(0, 0rem);
+    padding-bottom: 0.5rem;
 }
 
 #checks{
