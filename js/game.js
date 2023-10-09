@@ -31,6 +31,7 @@ let current4;
 let current5;
 let current6;
 
+
 // current user
 const currentUser = localStorage.getItem("user");
 console.log("Usuario-----> " + currentUser);
@@ -92,12 +93,12 @@ const currentPaletteColors = currentPalette.split(",");
 
 // pushing random position of current palette to generate a new random palette
 if (selectedDificulty === "easy") {
- randomPalette = [
-    currentPaletteColors[randomNumber[0]],
-    currentPaletteColors[randomNumber[1]],
-    currentPaletteColors[randomNumber[2]],
-    currentPaletteColors[randomNumber[3]]
-];
+    randomPalette = [
+        currentPaletteColors[randomNumber[0]],
+        currentPaletteColors[randomNumber[1]],
+        currentPaletteColors[randomNumber[2]],
+        currentPaletteColors[randomNumber[3]]
+    ];
 }
 
 if (selectedDificulty === "hard") {
@@ -287,29 +288,61 @@ if (selectedDificulty == "hard") {
 document.getElementById("gameover").style.display = "none";
 document.getElementById("winner").style.display = "none";
 
+// countdown
+const countDown = document.getElementById('moneyAmount');
+const countDownWin = document.getElementById('moneyAmountWin');
+let money = 30000;
+
+const updateMoney = () => {
+    money--;
+    countDown.innerHTML = `${money}€`;
+    countDownWin.innerHTML = `You have ${money}€ in your bank account`;
+
+    if (money <= 0) {
+        clearInterval(intervalId);
+        gameOver = true;
+        document.getElementById("gameover").style.display = "initial";
+        document.getElementById("pushToMatrix").disabled = true;
+        console.log("gameOver");
+        console.log('Game Over!');
+        return gameOver;
+    }
+};
+const intervalId = setInterval(updateMoney, 1);
+
 // print played row
 pushToMatrix.addEventListener('click', () => {
     const currentPlayerRow = refreshCurrent();
     if (selectedDificulty == "easy") {
-        currentPlayerRow.length=4;
+        currentPlayerRow.length = 4;
     }
     const currentCheckRow = checkRow(randomPalette, currentRow);
     tries--;
     if (tries < 0) {
         gameOver = true;
+        clearInterval(intervalId);
         document.getElementById("gameover").style.display = "initial";
         document.getElementById("pushToMatrix").disabled = true;
         console.log("gameOver");
     }
     const win = currentCheckRow.win;
-    if(win){
+    if (win) {
         document.getElementById("winner").style.display = "initial";
         document.getElementById("pushToMatrix").disabled = true;
+        clearInterval(intervalId);
     }
     console.log("He ganado -----> " + win);
     console.log(tries);
     console.log("Es gameover ----> " + gameOver);
+    if (tries <= 0 && win == false) {
+        gameOver = true;
+        clearInterval(intervalId);
+        document.getElementById("gameover").style.display = "initial";
+        document.getElementById("pushToMatrix").disabled = true;
+        console.log("gameOver");
+    }
     if (gameOver === false && win === false) {
+
         // get current played values
         console.log("Ms. Mind - Palette ---- > " + randomPalette);
         console.log("currentPlayerRow - Palette ---- > " + currentPlayerRow); // check current combination
@@ -387,3 +420,4 @@ pushToMatrix.addEventListener('click', () => {
         }
     }
 })
+

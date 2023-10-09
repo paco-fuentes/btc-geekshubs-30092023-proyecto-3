@@ -32,10 +32,18 @@ button {
     visibility: hidden;
 }
 
+/* cambiar a ingles */
 .titulo {
     /* weight --> ExtraLight = 200 */
     font-weight: 300;
     font-size: larger;
+}
+
+.title-center {
+    /* weight --> ExtraLight = 200 */
+    text-align: center;
+    font-weight: 600;
+    font-size:xx-large;
 }
 
 .txt {
@@ -50,9 +58,16 @@ button {
 }
 
 .txt-center-2 {
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: 600;
     font-size: small;
+    text-align: center;
+}
+
+.txt-center-3 {
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 200;
+    font-size:medium;
     text-align: center;
 }
 
@@ -101,7 +116,7 @@ button {
     width: 40rem;
     height: 30rem;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     /* text-align: center; */
     border: 2rem;
@@ -379,8 +394,8 @@ button {
     width: 18rem;
     height: 20rem;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: center; */
     border: 0.05rem;
     border-style: solid;
     border-color: white;
