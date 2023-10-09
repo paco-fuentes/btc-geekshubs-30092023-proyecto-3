@@ -72,33 +72,19 @@ button {
     cursor: pointer;
 }
 
-.toggle {
-    font-weight: 200;
-    position: relative;
-    font-size: small;
-    display: flex;
-    width: 6rem;
-    height: 2rem;
-    justify-content: center;
-    align-items: center;
-    border: 0.05rem;
-    border-style: dashed;
-    border-color: white;
-    transform: translate(0, 0rem);
-}
-
 /* index page */
 .relative-container-index {
     position: relative;
     background-color: rgb(0, 0, 0);
     display: flex;
     width: 40rem;
-    height: 20rem;
+    height: 30rem;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    border: 0.05rem;
-    border-style: solid;
+    /* text-align: center; */
+    border: 2rem;
+    border-style:ridge;
     border-color: white;
     transform: translate(0, 0rem);
 }
@@ -153,7 +139,7 @@ button {
     background-color: rgb(0, 0, 0);
     display: flex;
     width: 40rem;
-    height: 20rem;
+    height: 40rem;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -184,6 +170,22 @@ button {
     cursor: text;
     font-weight: 200;
     font-size: medium;
+}
+
+.toggle {
+    font-weight: 200;
+    position: relative;
+    font-size: small;
+    display: flex;
+    width: 6rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: dashed;
+    border-color: white;
+    transform: translate(0, 0rem);
+    cursor: pointer;
 }
 
 /* color-picker page */
