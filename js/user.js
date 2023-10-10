@@ -1,13 +1,26 @@
 document.getElementById("enter").disabled = true;
+enter.style.color = "rgba(255,255,255,0.3)";
+enter.classList.remove("button");
+enter.classList.add("button2");
 const user = document.getElementById('user')
 user.addEventListener('input', () => {
-    if (user.value.length > 1) {
+    if (user.value.length > 0) {
         document.getElementById("enter").disabled = false;
+        enter.style.color = "rgba(255,255,255)";
+        enter.classList.remove("button2");
+        enter.classList.add("button");
+    }
+    if (user.value.length <= 0) {
+        document.getElementById("enter").disabled = true;
+        enter.style.color = "rgba(255,255,255, 0.3)"
+        enter.classList.remove("button");
+        enter.classList.add("button2");
     }
     if (user.value.length > 13) {
         user.value = "Dani Tarazona";
     }
 })
+
 const checkEasy = document.getElementById("easy")
 const checkHard = document.getElementById("hard")
 let dificultSelected = "easy";

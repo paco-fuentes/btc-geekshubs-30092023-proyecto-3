@@ -24,6 +24,10 @@ button {
     all: unset;
 }
 
+.button2 {
+    border-color: rgba(255, 255,255,0.3) !important;
+}
+
 .hidden{
     visibility: hidden;
 }
@@ -67,6 +71,21 @@ button {
 }
 
 .button {
+    font-weight: 200;
+    position: relative;
+    font-size: small;
+    display: flex;
+    width: 6rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem;
+    border-style: dashed;
+    border-color: white;
+    transform: translate(0, 0rem);
+}
+
+.button2 {
     font-weight: 200;
     position: relative;
     font-size: small;
