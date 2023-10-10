@@ -542,8 +542,8 @@ button {
     align-content: center;
     border-radius: 50%;
     border: 0.05rem;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
     width: 1rem;
     height: 1rem;
     transform: translate(0, 0.5rem);
@@ -570,8 +570,8 @@ button {
     align-content: center;
     border-radius: 50%;
     border: 0.05rem;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
     width: 0.7rem;
     height: 0.7rem;
     transform: translate(0, 0.5rem);
@@ -586,7 +586,7 @@ button {
     height: 2rem;
     border: 0.05rem;
     border-style: solid;
-    border-color: black;
+    border-color: white;
 }
 
 .is-color-and-pos {
@@ -598,8 +598,8 @@ button {
     align-content: center;
     border-radius: 50%;
     border: 0.05rem;
-    border-style: solid;
-    border-color: white;
+    /* border-style: solid;
+    border-color: white; */
     width: 1rem;
     height: 1rem;
     transform: translate(0, 0.5rem);
@@ -614,7 +614,7 @@ button {
     height: 1.65rem;
     border: 0.05rem;
     border-style: solid;
-    border-color: black;
+    border-color: white;
 }
 
 .is-color-and-pos-hard {
@@ -626,8 +626,8 @@ button {
     align-content: center;
     border-radius: 50%;
     border: 0.05rem;
-    border-style: solid;
-    border-color: white;
+    /* border-style: solid;
+    border-color: white; */
     width: 0.7rem;
     height: 0.7rem;
     transform: translate(0, 0.5rem);

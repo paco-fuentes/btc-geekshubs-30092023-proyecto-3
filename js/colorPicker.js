@@ -54,15 +54,15 @@ colorSelect4.addEventListener('input', () => {
 defaultPalette.addEventListener('click', () => {
     selectedPalette.length = 4;
     // selectedPalette = [];
-    palette1.style.backgroundColor = "#8DECE1";
+    palette1.style.backgroundColor = "#8FEC8E";
     palette2.style.backgroundColor = "#52CBFF";
     palette3.style.backgroundColor = "#E0B2F5";
-    palette4.style.backgroundColor = "#B6FF85";
-    colorSelect1.value = "#8DECE1";
+    palette4.style.backgroundColor = "#FF5757";
+    colorSelect1.value = "#8FEC8E";
     colorSelect2.value = "#52CBFF";
     colorSelect3.value = "#E0B2F5";
-    colorSelect4.value = "#B6FF85";
-    selectedPalette = ["#8DECE1", "#52CBFF","#E0B2F5", "#B6FF85"];
+    colorSelect4.value = "#FF5757";
+    selectedPalette = ["#8FEC8E", "#52CBFF","#E0B2F5", "#FF5757"];
     console.log(selectedPalette);
     updateStylesAndClasses();
 })
