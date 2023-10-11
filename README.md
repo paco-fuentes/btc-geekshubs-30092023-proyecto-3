@@ -114,13 +114,6 @@ Link => [Mastermind](https://paco-fuentes.github.io/btc-geekshubs-30092023-proye
 Problem: The color palette buttons occasionally require multiple clicks.
 Observation: There appears to be a correlation with the array position in the previous row and the number of clicks relative to the current row.
 
-2. Empty Username Field Bypass:
-
-Problem: Entering a name and subsequently deleting it allows entry with an empty username field.
-Observation: Deleting the entered name should trigger validation to prevent submission with an empty username.
-
-These observations are crucial for enhancing the project's quality and user experience.
-
 ### Achivements and Solutions
 
 - 
@@ -147,14 +140,14 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENS
 
 <pre style="text-align: center">
                   
-                  (\ 
-                  \'\ 
-                   \'\     __________  
-                   / '|   ()_________)
-                   \ '/    \ ~~~~~~~~ \
-                     \       \ ~~~~~~   \
-                     ==).      \__________\
-                    (__)       ()__________)
+                         (\ 
+                         \'\ 
+                          \'\     __________  
+                          / '|   ()_________)
+                          \ '/    \ ~~~~~~~~ \
+                            \       \ ~~~~~~   \
+                            ==).      \__________\
+                           (__)       ()__________)
                   
   </pre>
 
@@ -171,7 +164,7 @@ Paco Fuentes
          (\-.--| |-----------.
         / \) \ | |            \
         |:.  | | |             |
-             |:.  | |o| E - M A I L |    ----- > pacofuentes.work@gmail.com
+      |:.  | |o| E - M A I L |    ----- > pacofuentes.work@gmail.com
         |:.  | `"`             |
         |:.  |_  __   __ _  __ /
         `""""`""""|=`|"""""""`

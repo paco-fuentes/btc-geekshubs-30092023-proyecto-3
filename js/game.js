@@ -16,7 +16,12 @@ const userPaletteCol3 = document.getElementById('userPaletteCol3')
 const userPaletteCol4 = document.getElementById('userPaletteCol4')
 const userPaletteCol5 = document.getElementById('userPaletteCol5')
 const userPaletteCol6 = document.getElementById('userPaletteCol6')
-let ruleta = 0;
+let ruleta1 = 0;
+let ruleta2 = 0;
+let ruleta3 = 0;
+let ruleta4 = 0;
+let ruleta5 = 0;
+let ruleta6 = 0;
 let current1;
 let current2;
 let current3;
@@ -104,57 +109,57 @@ if (selectedDificulty === "hard") {
     masterPalette6win.style.backgroundColor = randomPalette[5];
 }
 userPaletteCol1.addEventListener('click', () => {
-    ruleta++;
-    if (ruleta > 3) {
-        ruleta = 0;
+    ruleta1++;
+    if (ruleta1 > 3) {
+        ruleta1 = 0;
     }
-    userPaletteCol1.style.backgroundColor = currentPaletteColors[ruleta];
-    current1 = currentPaletteColors[ruleta];
+    userPaletteCol1.style.backgroundColor = currentPaletteColors[ruleta1];
+    current1 = currentPaletteColors[ruleta1];
     refreshCurrent();
 })
 userPaletteCol2.addEventListener('click', () => {
-    ruleta++;
-    if (ruleta > 3) {
-        ruleta = 0;
+    ruleta2++;
+    if (ruleta2 > 3) {
+        ruleta2 = 0;
     }
-    userPaletteCol2.style.backgroundColor = currentPaletteColors[ruleta];
-    current2 = currentPaletteColors[ruleta];
+    userPaletteCol2.style.backgroundColor = currentPaletteColors[ruleta2];
+    current2 = currentPaletteColors[ruleta2];
     refreshCurrent();
 })
 userPaletteCol3.addEventListener('click', () => {
-    ruleta++;
-    if (ruleta > 3) {
-        ruleta = 0;
+    ruleta3++;
+    if (ruleta3 > 3) {
+        ruleta3 = 0;
     }
-    userPaletteCol3.style.backgroundColor = currentPaletteColors[ruleta];
-    current3 = currentPaletteColors[ruleta];
+    userPaletteCol3.style.backgroundColor = currentPaletteColors[ruleta3];
+    current3 = currentPaletteColors[ruleta3];
     refreshCurrent();
 })
 userPaletteCol4.addEventListener('click', () => {
-    ruleta++;
-    if (ruleta > 3) {
-        ruleta = 0;
+    ruleta4++;
+    if (ruleta4 > 3) {
+        ruleta4 = 0;
     }
-    userPaletteCol4.style.backgroundColor = currentPaletteColors[ruleta];
-    current4 = currentPaletteColors[ruleta];
+    userPaletteCol4.style.backgroundColor = currentPaletteColors[ruleta4];
+    current4 = currentPaletteColors[ruleta4];
     refreshCurrent();
 })
 userPaletteCol5.addEventListener('click', () => {
-    ruleta++;
-    if (ruleta > 3) {
-        ruleta = 0;
+    ruleta5++;
+    if (ruleta5 > 3) {
+        ruleta5 = 0;
     }
-    userPaletteCol5.style.backgroundColor = currentPaletteColors[ruleta];
-    current5 = currentPaletteColors[ruleta];
+    userPaletteCol5.style.backgroundColor = currentPaletteColors[ruleta5];
+    current5 = currentPaletteColors[ruleta5];
     refreshCurrent();
 })
 userPaletteCol6.addEventListener('click', () => {
-    ruleta++;
-    if (ruleta > 3) {
-        ruleta = 0;
+    ruleta6++;
+    if (ruleta6 > 3) {
+        ruleta6 = 0;
     }
-    userPaletteCol6.style.backgroundColor = currentPaletteColors[ruleta];
-    current6 = currentPaletteColors[ruleta];
+    userPaletteCol6.style.backgroundColor = currentPaletteColors[ruleta6];
+    current6 = currentPaletteColors[ruleta6];
     refreshCurrent();
 })
 function refreshCurrent() {
