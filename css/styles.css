@@ -368,7 +368,7 @@ button {
     position: relative;
     display: flex;
     width: 18rem;
-    height: 20rem;
+    height: 20.6rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -382,7 +382,7 @@ button {
     position: relative;
     display: flex;
     width: 18rem;
-    height: 20rem;
+    height: 20.6rem;
     flex-direction: column;
     justify-content: space-evenly;
     border: 0.05rem;

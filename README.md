@@ -111,8 +111,10 @@ Link => [Mastermind](https://paco-fuentes.github.io/btc-geekshubs-30092023-proye
 
 1. Color Palette Button Issue:
 
-Problem: The color palette buttons occasionally require multiple clicks.
-Observation: There appears to be a correlation with the array position in the previous row and the number of clicks relative to the current row.
+Fixed.
+
+~~Problem: The color palette buttons occasionally require multiple clicks.
+Observation: There appears to be a correlation with the array position in the previous row and the number of clicks relative to the current row.~~
 
 ### Achivements and Solutions
 
@@ -123,7 +125,8 @@ Observation: There appears to be a correlation with the array position in the pr
 The following proposals are still pending:
 
 - Clue System: In the original board game, the player acting as the code master gives clues to the player trying to guess the color combination, the code breaker. The box with Ms. Mind's illustration has been designed so that in a future version 2.0, the clue system will be active and provide hints to the player. For example, it could indicate if a color is repeated or part of the combination in time-critical situations or when there is only one chance left.
-- Inactive Button Styles need to be implemented.
+- Responsive Design.
+- Light Mode toggle.
 - Sounds on buttons.
 - Background music.
 - Small animations between two or three different ASCII drawings.
@@ -164,7 +167,7 @@ Paco Fuentes
          (\-.--| |-----------.
         / \) \ | |            \
         |:.  | | |             |
-      |:.  | |o| E - M A I L |    ----- > pacofuentes.work@gmail.com
+        |:.  | |o| E - M A I L |    ----- >   pacofuentes.work@gmail.com
         |:.  | `"`             |
         |:.  |_  __   __ _  __ /
         `""""`""""|=`|"""""""`
