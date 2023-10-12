@@ -1,7 +1,7 @@
 
 # Ms. Mind
 
-by Paco Fuentes
+#### by Paco Fuentes
 
 ---
 
@@ -11,7 +11,7 @@ Classic Mastermind Board Game Implementation.
 
 This project is a version of the classic Mastermind board game, where a player must decode a pattern proposed by another player using black and white checks to get an approximate idea of what is correct and what is not. It serves as the third project completed during the GeeksHubs Academy Fullstack Bootcamp and marks the first project with a reasonable use of JavaScript.
 
-##### Deploy on Github Pages
+#### Deploy on Github Pages
 
 Link => [Mastermind](https://paco-fuentes.github.io/btc-geekshubs-30092023-proyecto-3/).
 
@@ -99,7 +99,7 @@ This screen appears when the player has exhausted the number of chances to decod
 
 <p align="center"><img src="./img/desarrollo.png"  width="100%" /></p>
 
-### Roadmap
+### This is the way
 
 #### Game strategy and winner algorithm
 
@@ -166,47 +166,47 @@ Observation: Deleting the entered name should trigger validation to prevent subm
 
 <pre style="text-align: center">
                             
-                                            |     |
-                                            \\_V_//
-                                            \/=|=\/
-                                             [=v=]
-                                           __\___/_____
-                                          /..[  _____  ]
-                                         /_  [ [  M /] ]
-                                        /../.[ [ M /@] ]
-                                       <-->[_[ [M /@/] ]
-                                      /../ [.[ [ /@/ ] ]
-                 _________________]\ /__/  [_[ [/@/ C] ]
-                <_________________>>0---]  [=\ \@/ C / /
-                   ___      ___   ]/000o   /__\ \ C / /
-                      \    /              /....\ \_/ /
-                   ....\||/....           [___/=\___/
-                  .    .  .    .          [...] [...]
-                 .      ..      .         [___/ \___]
-                 .    0 .. 0    .         <---> <--->
-              /\/\.    .  .    ./\/\      [..]   [..]
-             / / / .../|  |\... \ \ \    _[__]   [__]_
-            / / /       \/       \ \ \  [____>   <____]
+                                               |     |
+                                               \\_V_//
+                                               \/=|=\/
+                                                [=v=]
+                                              __\___/_____
+                                             /..[  _____  ]
+                                            /_  [ [  M /] ]
+                                           /../.[ [ M /@] ]
+                                          <-->[_[ [M /@/] ]
+                                         /../ [.[ [ /@/ ] ]
+                    _________________]\ /__/  [_[ [/@/ C] ]
+                   <_________________>>0---]  [=\ \@/ C / /
+                      ___      ___   ]/000o   /__\ \ C / /
+                         \    /              /....\ \_/ /
+                      ....\||/....           [___/=\___/
+                     .    .  .    .          [...] [...]
+                    .      ..      .         [___/ \___]
+                    .    0 .. 0    .         <---> <--->
+                 /\/\.    .  .    ./\/\      [..]   [..]
+                / / / .../|  |\... \ \ \    _[__]   [__]_
+               / / /       \/       \ \ \  [____>   <____]
 
 </pre>
 
 ### Achivements and Solutions
 
-- ##### First Project with JavaScript:
+- #### First Project with JavaScript:
 
 I've gained insights into variable scopes, function handling, and loops through loops, in my initial project with JavaScript. Understanding how to manage these aspects is crucial for effective programming.
 
-- ##### Initial Experience with DOM Manipulation:
+- #### Initial Experience with DOM Manipulation:
 
 This project marks my first foray into manipulating the Document Object Model (DOM). I've learned how to dynamically write and remove HTML elements directly from JavaScript code. Additionally, exploring the usage of local storage enhances my understanding of data persistence.
 
-- ##### Introduction to Game Design:
+- #### Introduction to Game Design:
 
 This project has served as an introduction to game design principles. I've learned how to structure a small program and design a user interface (UI) for an optimal user experience (UX). This encompasses considerations for how users interact with the application and the visual aspects that make it engaging.
 
 ### Enhancements
 
-#####The following proposals are still pending:
+#### The following proposals are still pending:
 
 - Clue System: In the original board game, the player acting as the code master gives clues to the player trying to guess the color combination, the code breaker. The box with Ms. Mind's illustration has been designed so that in a future version 2.0, the clue system will be active and provide hints to the player. For example, it could indicate if a color is repeated or part of the combination in time-critical situations or when there is only one chance left.
 - Responsive Design.
@@ -221,14 +221,14 @@ This project has served as an introduction to game design principles. I've learn
 
 <pre style="text-align: center">
                   
-                         (\ 
-                         \'\ 
-                          \'\     __________  
-                          / '|   ()_________)
-                          \ '/    \ ~~~~~~~~ \
-                            \       \ ~~~~~~   \
-                            ==).      \__________\
-                           (__)       ()__________)
+                            (\ 
+                            \'\ 
+                             \'\     __________  
+                             / '|   ()_________)
+                             \ '/    \ ~~~~~~~~ \
+                               \       \ ~~~~~~   \
+                               ==).      \__________\
+                              (__)       ()__________)
                   
   </pre>
 
